@@ -1477,6 +1477,16 @@ PrefabInstance:
       propertyPath: manager
       value: 
       objectReference: {fileID: 59659373}
+    - target: {fileID: 3351944476977394520, guid: 71b21368b6fc1de4c8d8e26dea885f52,
+        type: 3}
+      propertyPath: biopsyManager
+      value: 
+      objectReference: {fileID: 59659373}
+    - target: {fileID: 3351944476977394520, guid: 71b21368b6fc1de4c8d8e26dea885f52,
+        type: 3}
+      propertyPath: interactionManager
+      value: 
+      objectReference: {fileID: 1015256035}
     - target: {fileID: 3473118265309852958, guid: 71b21368b6fc1de4c8d8e26dea885f52,
         type: 3}
       propertyPath: m_Parameters.widthMultiplier
