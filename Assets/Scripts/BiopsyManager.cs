@@ -11,4 +11,6 @@ public class BiopsyManager : MonoBehaviour
     public BiopsyPath biopsyPath;
     public SurgicalPointBiopsy biopsyPoint;
     public SurgicalPointEntry entryPoint;
+
+    
 }

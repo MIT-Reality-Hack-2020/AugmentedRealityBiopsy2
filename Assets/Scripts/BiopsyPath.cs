@@ -23,7 +23,9 @@ public class BiopsyPath : MonoBehaviour
 
     public bool ToolInReach()
     {
-        return false;
+        return Vector3.Distance(
+            biopsyManager.biopsyTool.front.transform.position,
+            entryPoint.transform.position) < 0.05f;
     }
 
     public bool CorrectAngle()

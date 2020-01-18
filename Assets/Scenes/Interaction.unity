@@ -1492,6 +1492,16 @@ PrefabInstance:
       propertyPath: m_Parameters.widthMultiplier
       value: 0.002
       objectReference: {fileID: 0}
+    - target: {fileID: 2345407251899483420, guid: 71b21368b6fc1de4c8d8e26dea885f52,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6206136593715784825, guid: 71b21368b6fc1de4c8d8e26dea885f52,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71b21368b6fc1de4c8d8e26dea885f52, type: 3}
 --- !u!114 &469928784627551536 stripped
