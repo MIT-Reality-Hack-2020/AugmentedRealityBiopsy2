@@ -12,6 +12,14 @@ public class InteractionManager : MonoBehaviour
     {
         return Vector3.Distance(
             mainCamera.transform.position,
+            checkPosition
+        );
+    }
+
+    public float DistanceFromCamera()
+    {
+        return Vector3.Distance(
+            mainCamera.transform.position,
             overlay.transform.position
         );
     }

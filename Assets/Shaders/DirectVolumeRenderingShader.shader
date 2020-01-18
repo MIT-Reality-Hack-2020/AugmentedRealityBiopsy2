@@ -31,6 +31,7 @@
 				float4 vertex : POSITION;
                 float4 normal : NORMAL;
                 float2 uv : TEXCOORD0;
+                UNITY_VERTEX_INPUT_INSTANCE_ID
 			};
 
 			struct v2f
@@ -39,6 +40,7 @@
                 float2 uv : TEXCOORD0;
                 float3 vertexLocal : TEXCOORD1;
                 float3 normal : NORMAL;
+                UNITY_VERTEX_OUTPUT_STEREO
 			};
 
 			sampler3D _DataTex;
@@ -75,6 +77,8 @@
 			v2f vert_main (appdata v)
 			{
 				v2f o;
+                UNITY_SETUP_INSTANCE_ID(v);
+                UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
 				o.vertex = UnityObjectToClipPos(v.vertex);
                 o.uv = v.uv;
                 o.vertexLocal = v.vertex;
@@ -90,6 +94,8 @@
                 const float stepSize = 1.732f/*greatest distance in box*/ / NUM_STEPS;
 
                 float4 col = float4(i.vertexLocal.x, i.vertexLocal.y, i.vertexLocal.z, 1.0f);
+
+                UNITY_SETUP_STEREO_EYE_INDEX_POST_VERTEX(i);
 
                 float3 rayStartPos = i.vertexLocal + float3(0.5f, 0.5f, 0.5f);
                 float3 rayDir = ObjSpaceViewDir(float4(i.vertexLocal, 0.0f));
