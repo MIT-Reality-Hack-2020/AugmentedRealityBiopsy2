@@ -4,6 +4,6 @@ using UnityEngine;
 
 public abstract class SurgicalPoint : MonoBehaviour
 {
-
+    public BiopsyManager manager;
 
 }

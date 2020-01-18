@@ -5,6 +5,6 @@ using UnityEngine;
 public class AROverlay : MonoBehaviour
 {
     
+    public Head head;
 
-    
 }

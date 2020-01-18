@@ -2,8 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+public enum Phase
+{
+    far, // you see nothing
+    identification,  /// skinned model, patient ID, checklist, 
+    close, // entrypoint
+}
+
+
 public class InteractionManager : MonoBehaviour
 {
+    public Phase currentPhase;
+
     public Camera mainCamera;
     public AROverlay overlay;
     public PatientID patientID;
@@ -26,6 +37,20 @@ public class InteractionManager : MonoBehaviour
 
     public void Update()
     {
+        if(DistanceFromCamera() > 1f )
+        {
+            currentPhase = Phase.far;
+        }
+        else if(DistanceFromCamera() <= 1f && DistanceFromCamera() > 0.5f)
+        {
+            currentPhase = Phase.identification;
+        }
+        else if(DistanceFromCamera() < 0.5f)
+        {
+            currentPhase = Phase.close;    
+        }
+
+
         patientID.UpdateInterface();
     }
 

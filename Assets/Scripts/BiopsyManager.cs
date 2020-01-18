@@ -4,6 +4,14 @@ using UnityEngine;
 using System.Linq;
 
 
+public enum BiopsyStep
+{
+    veryFar, // you see nothing
+    identification,  /// skinned model, patient ID, checklist, 
+    procedureBegins, // entrypoint
+    transparency
+}
+
 public class BiopsyManager : MonoBehaviour
 {
     public BiopsyTool biopsyTool;
@@ -23,4 +31,6 @@ public class BiopsyManager : MonoBehaviour
             biopsyTool.RightIndexFinger().transform.position,
             entryPoint.transform.position) < 0.1f;
     }
+
+
 }
