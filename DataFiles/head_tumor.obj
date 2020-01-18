@@ -1,0 +1,7 @@
+# 3D Slicer output. SPACE=LPS
+
+mtllib head_tumor.mtl
+
+
+g grp1
+usemtl mtl1
