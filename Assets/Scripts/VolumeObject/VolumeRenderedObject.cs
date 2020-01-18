@@ -13,6 +13,21 @@ public class VolumeRenderedObject : MonoBehaviour
 
     private RenderMode remderMode;
 
+    
+    void Update()
+    {
+        
+        if(Program.instance.interactionManager.overlay.currentStyle == OverlayStyle.mri
+        || Program.instance.interactionManager.overlay.currentStyle == OverlayStyle.compound)
+        {
+            GetComponent<MeshRenderer>().enabled = true;
+        }
+        else
+        {
+            GetComponent<MeshRenderer>().enabled = false;
+        }
+    }
+
     public SlicingPlane CreateSlicingPlane()
     {
         GameObject sliceRenderingPlane = GameObject.Instantiate(Resources.Load<GameObject>("SlicingPlane"));

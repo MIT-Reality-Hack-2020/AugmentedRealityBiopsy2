@@ -8,27 +8,44 @@ public class PatientID : UIObject
     public AROverlay overlay;
 
 
+    public bool outOfTheWay;
+
     public override void UpdateInterface()
     {
-        if (manager.DistanceFromCamera(overlay.transform.position) > 0.7f)
+        if (manager.currentPhase == Phase.far)
         {
             enabled = false;
         }
-        else
+        else if (manager.currentPhase == Phase.identification)
         {
             enabled = true;
+            outOfTheWay = false;
+        }
+        else if (manager.currentPhase == Phase.close)
+        {
+            enabled = true;
+            outOfTheWay = true;
         }
     }
 
     public void OnEnable()
     {
         Debug.Log("Fade In");
-        // foreach(Transform child in transform.GetChildren)
+        int children = transform.childCount;
+        for (int i = 0; i < children; ++i)
+        {
+            transform.GetChild(i).gameObject.SetActive(true);
+        }
     }
 
     public void OnDisable()
     {
         Debug.Log("Fade Out");
+        int children = transform.childCount;
+        for (int i = 0; i < children; ++i)
+        {
+            transform.GetChild(i).gameObject.SetActive(false);
+        }
     }
 
     // public IEnumerator FadeIn()

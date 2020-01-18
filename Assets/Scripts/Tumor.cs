@@ -14,5 +14,13 @@ public class Tumor : MonoBehaviour
     void Update()
     {
         
+        if(Program.instance.interactionManager.overlay.currentStyle != OverlayStyle.skinned)
+        {
+            GetComponent<MeshRenderer>().enabled = true;
+        }
+        else
+        {
+            GetComponent<MeshRenderer>().enabled = false;
+        }
     }
 }

@@ -941,6 +941,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2289e54eb7e7334e89d97c78f7b38d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentPhase: 0
   mainCamera: {fileID: 68578564}
   overlay: {fileID: 469928784627551536}
   patientID: {fileID: 469928784627551537}
@@ -1632,11 +1633,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: BiopsyTool
       objectReference: {fileID: 0}
-    - target: {fileID: 1062267001749967959, guid: 9726765ae7e4e784486ce942c6763c36,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2079175474681211694, guid: 9726765ae7e4e784486ce942c6763c36,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -1672,6 +1668,11 @@ PrefabInstance:
       propertyPath: manager
       value: 
       objectReference: {fileID: 59659373}
+    - target: {fileID: 1062267001749967959, guid: 9726765ae7e4e784486ce942c6763c36,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5593874302484684777, guid: 9726765ae7e4e784486ce942c6763c36,
         type: 3}
       propertyPath: m_Name

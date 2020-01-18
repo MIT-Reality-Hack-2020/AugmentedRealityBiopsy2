@@ -6,15 +6,14 @@ public class SurgicalPointEntry : SurgicalPoint
 {
     public void Update()
     {
-        if(manager.ToolInReach())
+        if(Program.instance.interactionManager.currentPhase == Phase.close)
         {
-            GetComponent<MeshRenderer>().enabled = false;
+            GetComponent<MeshRenderer>().enabled = true;
         }
         else
         {
-             GetComponent<MeshRenderer>().enabled = true;
+             GetComponent<MeshRenderer>().enabled = false;
         }
-
     }
 
    

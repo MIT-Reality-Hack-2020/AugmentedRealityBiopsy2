@@ -180,9 +180,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd923166b89bdcc4d87b4d3b6676dc97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  overlay: {fileID: 1075076804449412299}
   materialSkin: {fileID: 2100000, guid: 5b886771bb5bdd841b9d6c052ca11709, type: 2}
   materialInside: {fileID: 2100000, guid: 5d241aae6a682fc47a04227a6b1aa92a, type: 2}
-  skinned: 0
 --- !u!1 &1295064966276221717
 GameObject:
   m_ObjectHideFlags: 0
@@ -232,9 +232,6 @@ MonoBehaviour:
   lineRenderer: {fileID: 3473118265309852958}
   biopsyPoint: {fileID: 7701104244206329860}
   entryPoint: {fileID: 6774980244368678554}
-  matRegular: {fileID: 2100000, guid: 0a880cdc24ea83b44bef6302c6166dab, type: 2}
-  matCorrent: {fileID: 2100000, guid: 495ec0c9242ffe542b7579d142baf1ff, type: 2}
-  matFalse: {fileID: 2100000, guid: 4154dbd5067becb4286f39c938a8e7cc, type: 2}
 --- !u!120 &3473118265309852958
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -252,7 +249,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0a880cdc24ea83b44bef6302c6166dab, type: 2}
+  - {fileID: 2100000, guid: 7838fbcea4cd8834bb12a9072a102b6b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -381,7 +378,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9123416e1563d4549bbac73900aebc05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  head: {fileID: 0}
+  currentStyle: 0
+  head: {fileID: 5130244787199827700}
 --- !u!1 &2994015477687344261
 GameObject:
   m_ObjectHideFlags: 0
@@ -486,6 +484,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1af95d28cda5f9b4ab4f6a03bffef6de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  manager: {fileID: 0}
 --- !u!1 &6235510992115389721
 GameObject:
   m_ObjectHideFlags: 0
