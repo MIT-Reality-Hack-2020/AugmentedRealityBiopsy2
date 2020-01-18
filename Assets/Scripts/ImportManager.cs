@@ -101,10 +101,11 @@ public class ImportManager : MonoBehaviour
     public VolumeRenderedObject CreateVolumeRenderedObject(VolumeDataset dataset)
     {
         GameObject go = GameObject.Instantiate(volumeObjectPrefab) as GameObject;
-        go.transform.position = new Vector3(0f, 0f, 0.5f);
-        
-        go.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
-        go.transform.localScale = new Vector3(0.3f, 0.3f, 0.2f);
+
+        go.transform.SetParent(Program.instance.aROverlay.transform);
+        go.transform.localPosition = new Vector3(-0.0083f, 0.0426f, 0.0083f);
+        go.transform.rotation = Quaternion.Euler(-20f, 180f, 180f);
+        go.transform.localScale = new Vector3(-0.24f, 0.23f, 0.16f);
 
         VolumeRenderedObject volObj = go.GetComponent<VolumeRenderedObject>();
         MeshRenderer meshRenderer = go.GetComponent<MeshRenderer>();

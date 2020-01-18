@@ -721,7 +721,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &552285240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -729,16 +729,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 552285239}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 89abd63bf2183c440a6d9636e1259a8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dimX: 512
-  dimY: 512
-  dimZ: 71
+  dimX: 256
+  dimY: 256
+  dimZ: 121
   contentFormat: 2
-  filePath: DataFiles/brain_mri.raw
+  filePath: DataFiles/brain_nose.raw
   skipBytes: 6
   volumeObjectPrefab: {fileID: 1758459268553486, guid: 06d1ae9362ecddb44844bf342a6fc7f3,
     type: 3}
@@ -960,7 +960,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1444691769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -968,7 +968,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1444691768}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ea8cfdefa578c354a817d9931fc398cc, type: 3}
   m_Name: 
