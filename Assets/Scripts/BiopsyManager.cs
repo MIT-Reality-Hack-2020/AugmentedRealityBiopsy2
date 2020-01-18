@@ -20,7 +20,7 @@ public class BiopsyManager : MonoBehaviour
     public bool ToolInReach()
     {
         return Vector3.Distance(
-            biopsyTool.front.transform.position,
+            biopsyTool.RightIndexFinger().transform.position,
             entryPoint.transform.position) < 0.1f;
     }
 }
