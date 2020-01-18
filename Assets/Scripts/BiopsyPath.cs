@@ -23,7 +23,7 @@ public class BiopsyPath : MonoBehaviour
             lineRenderer.positionCount = 3;
             lineRenderer.SetPosition(0, biopsyPoint.transform.position);
             lineRenderer.SetPosition(1, entryPoint.transform.position);
-            lineRenderer.SetPosition(2, biopsyPoint.transform.position + (entryPoint.transform.position - biopsyPoint.transform.position)*1.5f);
+            lineRenderer.SetPosition(2, biopsyPoint.transform.position + (entryPoint.transform.position - biopsyPoint.transform.position)*2f);
         }
         else
         {

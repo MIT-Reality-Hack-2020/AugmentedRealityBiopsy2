@@ -17,23 +17,29 @@ public class BiopsyTool : MonoBehaviour
         return GameObject.Find("Right_PokePointer(Clone)");
     }
 
+    public GameObject Wrist()
+    {
+        GameObject rightHand = GameObject.Find("Right_HandRight(Clone)");
+        if (rightHand)
+            return rightHand.transform.Find("Wrist Proxy Transform").gameObject;
+        else
+        {
+            return null;
+        }
+
+    }
     public void Update()
     {
-        GameObject wrist = null;
-        GameObject rightHand = GameObject.Find("Right_HandRight(Clone)");
-        if(rightHand)
-            wrist = rightHand.transform.Find("Wrist Proxy Transform").gameObject;
 
         //GameObject pointer = GameObject.Find("Right_DefaultControllerPointer(Clone)");
 
-
-        if(wrist && RightIndexFinger() && manager.ToolInReach())
+        if (Wrist() && RightIndexFinger() && manager.ToolInReach())
         {
             rod.positionCount = 3;
             //rod.SetPosition(0, wrist.transform.position);
-            rod.SetPosition(0, wrist.transform.position);
+            rod.SetPosition(0, Wrist().transform.position);
             rod.SetPosition(1, RightIndexFinger().transform.position);
-            rod.SetPosition(2, (RightIndexFinger().transform.position-wrist.transform.position));
+            rod.SetPosition(2, (RightIndexFinger().transform.position - Wrist().transform.position));
         }
         else
         {
