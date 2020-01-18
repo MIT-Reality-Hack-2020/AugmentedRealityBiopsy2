@@ -21,16 +21,9 @@ public class BiopsyPath : MonoBehaviour
         return interactionManager.DistanceFromCamera() < interactionThreshold;
     }
 
-    public bool ToolInReach()
-    {
-        return Vector3.Distance(
-            biopsyManager.biopsyTool.front.transform.position,
-            entryPoint.transform.position) < 0.05f;
-    }
-
     public bool CorrectAngle()
     {
-        return false;
+        return true;
     }
 
     // Update is called once per frame
@@ -42,19 +35,14 @@ public class BiopsyPath : MonoBehaviour
             lineRenderer.SetPosition(0, biopsyPoint.transform.position);
             lineRenderer.SetPosition(1, entryPoint.transform.position);
 
-            if (!ToolInReach())
+            lineRenderer.material = matRegular;
+
+            if (!biopsyManager.ToolInReach())
             {
                 // regular
-                lineRenderer.material = matRegular;
             }
-            else if (interactionManager.DistanceFromCamera() < 0.2f &&
-                ToolInReach() && CorrectAngle())
-            {
-                //green
-            }
-            else if (ToolInReach() && !CorrectAngle())
-            {
-                //red
+            else{
+                
             }
         }
         else

@@ -10,6 +10,7 @@ public class Program : MonoBehaviour
     public BiopsyManager biopsyManager;
     public TransferFunctionManager transferFunctionManager;
     public VolumeRenderedObject volumeRenderedObject;
+    public AROverlay aROverlay;
 
     public void Awake()
     {

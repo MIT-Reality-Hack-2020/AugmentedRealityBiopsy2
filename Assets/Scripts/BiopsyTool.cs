@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BiopsyTool : MonoBehaviour
 {
+    public BiopsyManager manager;
     public GameObject front;
     public GameObject back;
+    public BiopsyToolExtension extension;
 }
