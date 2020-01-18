@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class BiopsyPath : MonoBehaviour
 {
-    public BiopsyManager manager;
+    public BiopsyManager biopsyManager;
+    public InteractionManager interactionManager;
     public LineRenderer lineRenderer;
     public SurgicalPointBiopsy biopsyPoint;
     public SurgicalPointEntry entryPoint;
@@ -13,11 +14,11 @@ public class BiopsyPath : MonoBehaviour
     public Material matCorrent;
     public Material matFalse;
 
-    // Update is called once per frame
-    void Update()
+    float interactionThreshold = 0.4f;
+
+    public bool IsVisible()
     {
-        UpdatePosition();
-        UpdateAppearance();
+        return interactionManager.DistanceFromCamera() < interactionThreshold;
     }
 
     public bool ToolInReach()
@@ -30,14 +31,29 @@ public class BiopsyPath : MonoBehaviour
         return false;
     }
 
-
-    public void UpdatePosition()
+    // Update is called once per frame
+    void Update()
     {
-        if(biopsyPoint && entryPoint)
+        if (IsVisible() && biopsyPoint && entryPoint)
         {
             lineRenderer.positionCount = 2;
             lineRenderer.SetPosition(0, biopsyPoint.transform.position);
             lineRenderer.SetPosition(1, entryPoint.transform.position);
+
+            if (!ToolInReach())
+            {
+                // regular
+                lineRenderer.material = matRegular;
+            }
+            else if (interactionManager.DistanceFromCamera() < 0.2f &&
+                ToolInReach() && CorrectAngle())
+            {
+                //green
+            }
+            else if (ToolInReach() && !CorrectAngle())
+            {
+                //red
+            }
         }
         else
         {
@@ -45,20 +61,4 @@ public class BiopsyPath : MonoBehaviour
         }
     }
 
-    public void UpdateAppearance()
-    {
-        if(!ToolInReach())
-        {
-            // regular
-
-        }
-        else if(ToolInReach() && CorrectAngle())
-        {
-            //green
-        }
-        else if(ToolInReach() && !CorrectAngle())
-        {
-            //red
-        }
-    }
 }
