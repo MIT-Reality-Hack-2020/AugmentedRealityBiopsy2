@@ -5,39 +5,85 @@ using UnityEngine;
 public class BiopsyTool : MonoBehaviour
 {
     public BiopsyManager manager;
-
-    public GameObject front;
-    public GameObject back;
-    public BiopsyToolExtension extension;
-
     public LineRenderer rod;
+    public LineRenderer coloredTip;
+
+    public GameObject fakeFingerFront;
+    
+    public GameObject fakeFingerBack;
+
+    public Vector3 toolTip;
+
+    public bool biopsyRunning;
+
+    public float lengthOfTool = 0.2f;
 
     public GameObject RightIndexFinger()
     {
         return GameObject.Find("Right_PokePointer(Clone)");
     }
 
+    public GameObject Wrist()
+    {
+        GameObject rightHand = GameObject.Find("Right_HandRight(Clone)");
+        if (rightHand)
+            return rightHand.transform.Find("Wrist Proxy Transform").gameObject;
+        else
+        {
+            return null;
+        }
+    }
+
+    public float DistanceFromTumor()
+    {
+        return Vector3.Distance(
+            Program.instance.aROverlay.tumor.transform.position,
+            toolTip
+        );
+    }
+
+    public Vector3 ToolVector(GameObject frontObject, GameObject backObject)
+    {
+        return (frontObject.transform.position - backObject.transform.position).normalized;
+    } 
+
     public void Update()
     {
-        GameObject wrist = null;
-        GameObject rightHand = GameObject.Find("Right_HandRight(Clone)");
-        if(rightHand)
-            wrist = rightHand.transform.Find("Wrist Proxy Transform").gameObject;
+        GameObject indexFingerKnuckle = GameObject.Find("IndexKnuckle Proxy Transform");
 
-        //GameObject pointer = GameObject.Find("Right_DefaultControllerPointer(Clone)");
-
-
-        if(wrist && RightIndexFinger() && manager.ToolInReach())
+        if (RightIndexFinger() && indexFingerKnuckle
+        && Program.instance.interactionManager.currentPhase == Phase.close)
         {
-            rod.positionCount = 3;
-            //rod.SetPosition(0, wrist.transform.position);
-            rod.SetPosition(0, wrist.transform.position);
-            rod.SetPosition(1, RightIndexFinger().transform.position);
-            rod.SetPosition(2, (RightIndexFinger().transform.position-wrist.transform.position));
+            biopsyRunning = true;
+            
+            toolTip = RightIndexFinger().transform.position + ToolVector(RightIndexFinger(), indexFingerKnuckle) * lengthOfTool;
+            
+            Vector3 endOfTool = RightIndexFinger().transform.position + -ToolVector(RightIndexFinger(), indexFingerKnuckle) * lengthOfTool;
+
+            rod.positionCount = 2;
+            rod.SetPosition(0, toolTip);
+            rod.SetPosition(1, endOfTool);
+
+            float remainingDistance = Vector3.Distance(
+                Program.instance.aROverlay.tumor.transform.position,
+                toolTip
+            );
+
+            coloredTip.positionCount = 2;
+            coloredTip.SetPosition(0, toolTip);
+            coloredTip.SetPosition(
+                1, 
+                toolTip + -ToolVector(RightIndexFinger(), indexFingerKnuckle) * remainingDistance // fakefinger
+            );
+
+            this.transform.position = RightIndexFinger().transform.position;
         }
         else
         {
+            biopsyRunning = false;
             rod.positionCount = 0;
+            coloredTip.positionCount = 0;
+            toolTip = Vector3.zero;
         }
 
     }

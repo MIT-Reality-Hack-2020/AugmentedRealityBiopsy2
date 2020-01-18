@@ -150,7 +150,7 @@ PlayerSettings:
       sharedDepthBuffer: 0
       dashSupport: 0
     enable360StereoCapture: 0
-  isWsaHolographicRemotingEnabled: 0
+  isWsaHolographicRemotingEnabled: 1
   protectGraphicsMemory: 0
   enableFrameTimingStats: 0
   useHDRDisplay: 0
@@ -711,7 +711,7 @@ PlayerSettings:
   metroCertificatePassword: 
   metroCertificateSubject: Microsoft
   metroCertificateIssuer: Microsoft
-  metroCertificateNotAfter: 80b15b7b5218d601
+  metroCertificateNotAfter: 805f1f5559edd601
   metroApplicationDescription: Microsoft.MixedReality.Toolkit.RayActivity
   wsaImages: {}
   metroTileShortName: MixedRealityToolkit

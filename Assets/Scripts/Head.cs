@@ -4,15 +4,36 @@ using UnityEngine;
 
 public class Head : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public AROverlay overlay;
+    public Material materialSkin;
+    public Material materialInside;
 
+    
     // Update is called once per frame
     void Update()
     {
-        
+        if(Program.instance.interactionManager.currentPhase == Phase.far)
+        {
+            GetComponent<MeshRenderer>().enabled = false;
+        }
+        else
+        {
+            if(overlay.currentStyle == OverlayStyle.skinned)
+            {
+                GetComponent<MeshRenderer>().enabled = true;
+                GetComponent<MeshRenderer>().material = materialSkin;
+
+            }
+            else if(overlay.currentStyle == OverlayStyle.mri)
+            {
+                GetComponent<MeshRenderer>().enabled = false;
+            }
+            else
+            {
+                GetComponent<MeshRenderer>().enabled = true;
+                GetComponent<MeshRenderer>().material = materialInside;
+            }
+        }
+
     }
 }
