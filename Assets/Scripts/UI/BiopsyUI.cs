@@ -17,7 +17,7 @@ public class BiopsyUI : UIObject
             enabled = true;
 
             label.text = Math.Round(
-                manager.biopsyTool.DistanceFromTumor() / 10,
+                manager.biopsyTool.DistanceFromTumor(),
                 2
             ).ToString() + " cm";
         }

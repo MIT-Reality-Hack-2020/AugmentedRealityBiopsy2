@@ -8,7 +8,15 @@ public class BiopsyTool : MonoBehaviour
     public LineRenderer rod;
     public LineRenderer coloredTip;
 
+    public GameObject fakeFingerFront;
+    
+    public GameObject fakeFingerBack;
+
     public Vector3 toolTip;
+
+    public bool biopsyRunning;
+
+    public float lengthOfTool = 0.2f;
 
     public GameObject RightIndexFinger()
     {
@@ -34,33 +42,30 @@ public class BiopsyTool : MonoBehaviour
         );
     }
 
+    public Vector3 ToolVector(GameObject frontObject, GameObject backObject)
+    {
+        return (frontObject.transform.position - backObject.transform.position).normalized;
+    } 
+
     public void Update()
     {
         //GameObject pointer = GameObject.Find("Right_DefaultControllerPointer(Clone)");
         GameObject thumbTipGO = GameObject.Find("ThumbTip Proxy Transform");
 
+        GameObject indexFingerKnuckle = GameObject.Find("IndexKnuckle Proxy Transform");
 
-        if (Wrist() && RightIndexFinger() && thumbTipGO
+        if (Wrist() && RightIndexFinger() && thumbTipGO && indexFingerKnuckle
         && Program.instance.interactionManager.currentPhase == Phase.close)
         {
-
-            Vector3 thumbTip = thumbTipGO.transform.position;
-
-            Vector3 uprightVector = (Wrist().transform.position - RightIndexFinger().transform.position);
-
-            Vector3 toolVector = Vector3.Cross(
-                uprightVector,
-                RightIndexFinger().transform.position - thumbTip
-            );
-
+            biopsyRunning = true;
             
-            toolTip = thumbTip + toolVector * 0.2f;
+            toolTip = RightIndexFinger().transform.position + ToolVector(RightIndexFinger(), indexFingerKnuckle) * lengthOfTool;
+            
+            Vector3 endOfTool = RightIndexFinger().transform.position + -ToolVector(RightIndexFinger(), indexFingerKnuckle) * lengthOfTool;
 
             rod.positionCount = 2;
-            //rod.SetPosition(0, wrist.transform.position);
             rod.SetPosition(0, toolTip);
-            rod.SetPosition(1, thumbTip - toolVector * 0.2f);
-
+            rod.SetPosition(1, endOfTool);
 
             float remainingDistance = Vector3.Distance(
                 Program.instance.aROverlay.tumor.transform.position,
@@ -71,11 +76,14 @@ public class BiopsyTool : MonoBehaviour
             coloredTip.SetPosition(0, toolTip);
             coloredTip.SetPosition(
                 1, 
-                manager.entryPoint.transform.position + toolVector * remainingDistance
+                toolTip + -ToolVector(RightIndexFinger(), indexFingerKnuckle) * remainingDistance // fakefinger
             );
+
+            this.transform.position = RightIndexFinger().transform.position;
         }
         else
         {
+            biopsyRunning = false;
             rod.positionCount = 0;
             coloredTip.positionCount = 0;
             toolTip = Vector3.zero;

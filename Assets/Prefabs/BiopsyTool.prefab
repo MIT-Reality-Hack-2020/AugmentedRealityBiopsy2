@@ -57,7 +57,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 94748853cc629d2488e39cb507180de3, type: 2}
+  - {fileID: 2100000, guid: 1237d22972986b84b9a3195e00bf63a5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -319,7 +319,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   manager: {fileID: 0}
   rod: {fileID: 7659758435290756436}
-  coloredTip: {fileID: 0}
+  coloredTip: {fileID: 1366981961995066965}
   toolTip: {x: 0, y: 0, z: 0}
 --- !u!1 &5593874302484684777
 GameObject:
