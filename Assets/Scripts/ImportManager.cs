@@ -48,7 +48,7 @@ public class ImportManager : MonoBehaviour
         dataset.dimY = dimY;
         dataset.dimZ = dimZ;
 
-        FileStream fs = new FileStream(filePath, FileMode.Open);
+        FileStream fs = new FileStream(System.IO.Path.Combine(Application.streamingAssetsPath, filePath), FileMode.Open);
         BinaryReader reader = new BinaryReader(fs);
 
         if (skipBytes > 0)
@@ -105,7 +105,6 @@ public class ImportManager : MonoBehaviour
         go.transform.SetParent(Program.instance.aROverlay.orientationSphere.transform);
         go.transform.localPosition = new Vector3(-0.0083f, 0.0426f, 0.0083f);
         go.transform.rotation = Quaternion.Euler(-20f, 180f, 180f);
-        go.transform.localScale = new Vector3(-0.24f, 0.23f, 0.16f);
 
         VolumeRenderedObject volObj = go.GetComponent<VolumeRenderedObject>();
         MeshRenderer meshRenderer = go.GetComponent<MeshRenderer>();

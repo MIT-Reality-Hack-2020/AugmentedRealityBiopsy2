@@ -8,7 +8,7 @@ public class Head : MonoBehaviour
     public Material materialSkin;
     public Material materialInside;
 
-
+    
     // Update is called once per frame
     void Update()
     {
