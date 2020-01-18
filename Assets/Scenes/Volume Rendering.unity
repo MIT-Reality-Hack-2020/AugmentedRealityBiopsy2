@@ -94,8 +94,8 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaDirect: 0.5
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
+    m_ShowResolutionOverlay: 1
     m_ExportTrainingData: 0
-    m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -127,6 +127,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1456262916}
     m_Modifications:
+    - target: {fileID: 7307063430618434862, guid: 1093263a89abe47499cccf7dcb08effb,
+        type: 3}
+      propertyPath: m_Name
+      value: PinchSliderColorGreen
+      objectReference: {fileID: 0}
     - target: {fileID: 7307063430008138807, guid: 1093263a89abe47499cccf7dcb08effb,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -362,11 +367,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7307063430618434862, guid: 1093263a89abe47499cccf7dcb08effb,
-        type: 3}
-      propertyPath: m_Name
-      value: PinchSliderColorGreen
-      objectReference: {fileID: 0}
     - target: {fileID: 7307063430758334042, guid: 1093263a89abe47499cccf7dcb08effb,
         type: 3}
       propertyPath: m_Name
@@ -539,43 +539,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 2
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 703093937}
-          m_MethodName: PlayOneShot
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 8300000, guid: 291bf9326e517b0489c2ee53d0a6a63f,
-              type: 3}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 3
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 703093937}
-          m_MethodName: PlayOneShot
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 8300000, guid: 40ae713ddf420714bbc1a3b5c3f2eac1,
-              type: 3}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 9
-    callback:
-      m_PersistentCalls:
-        m_Calls: []
 --- !u!1 &31894368
 GameObject:
   m_ObjectHideFlags: 0
@@ -633,7 +596,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -711,6 +673,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Launch Settings
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6a84f857bec7e7345843ae29404c57ce, type: 2}
@@ -845,7 +809,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -865,6 +828,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 377361798}
     m_Modifications:
+    - target: {fileID: 2204069621426241315, guid: 3f1f46cbecbe08e46a303ccfdb5b498a,
+        type: 3}
+      propertyPath: m_Name
+      value: PressableButtonPlated (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 1874729665501627384, guid: 3f1f46cbecbe08e46a303ccfdb5b498a,
         type: 3}
       propertyPath: m_IsActive
@@ -884,11 +852,6 @@ PrefabInstance:
         type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2204069621426241315, guid: 3f1f46cbecbe08e46a303ccfdb5b498a,
-        type: 3}
-      propertyPath: m_Name
-      value: PressableButtonPlated (1)
       objectReference: {fileID: 0}
     - target: {fileID: 2204069621878992557, guid: 3f1f46cbecbe08e46a303ccfdb5b498a,
         type: 3}
@@ -1121,7 +1084,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -1213,6 +1175,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Color Change on Pressed Event
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6a84f857bec7e7345843ae29404c57ce, type: 2}
@@ -1347,7 +1311,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -1360,112 +1323,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!1 &103894663
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 103894668}
-  - component: {fileID: 103894667}
-  - component: {fileID: 103894666}
-  - component: {fileID: 103894665}
-  - component: {fileID: 103894664}
-  m_Layer: 0
-  m_Name: BiopsyTool
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &103894664
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 103894663}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24ec5d058ad995f438ad61a1d3006987, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!136 &103894665
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 103894663}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &103894666
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 103894663}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!33 &103894667
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 103894663}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &103894668
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 103894663}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.5}
-  m_LocalScale: {x: 0.003, y: 0.1, z: 0.003}
-  m_Children: []
-  m_Father: {fileID: 2107367068}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &119510006
 GameObject:
   m_ObjectHideFlags: 0
@@ -1523,6 +1380,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Always visible
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6a84f857bec7e7345843ae29404c57ce, type: 2}
@@ -1641,7 +1500,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -1727,6 +1585,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: 'One/Two-handed
 
     Rotate about grab point'
@@ -1847,7 +1707,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -1876,153 +1735,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 120013083}
   m_Mesh: {fileID: 0}
---- !u!1 &120764911
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 120764912}
-  - component: {fileID: 120764914}
-  - component: {fileID: 120764913}
-  m_Layer: 0
-  m_Name: BiopsyPath
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &120764912
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 120764911}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2107367068}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!120 &120764913
-LineRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 120764911}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 0
-  m_LightProbeUsage: 0
-  m_ReflectionProbeUsage: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 0a880cdc24ea83b44bef6302c6166dab, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Positions:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 1}
-  m_Parameters:
-    serializedVersion: 3
-    widthMultiplier: 0.01
-    widthCurve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    colorGradient:
-      serializedVersion: 2
-      key0: {r: 1, g: 1, b: 1, a: 1}
-      key1: {r: 1, g: 1, b: 1, a: 1}
-      key2: {r: 0, g: 0, b: 0, a: 0}
-      key3: {r: 0, g: 0, b: 0, a: 0}
-      key4: {r: 0, g: 0, b: 0, a: 0}
-      key5: {r: 0, g: 0, b: 0, a: 0}
-      key6: {r: 0, g: 0, b: 0, a: 0}
-      key7: {r: 0, g: 0, b: 0, a: 0}
-      ctime0: 0
-      ctime1: 65535
-      ctime2: 0
-      ctime3: 0
-      ctime4: 0
-      ctime5: 0
-      ctime6: 0
-      ctime7: 0
-      atime0: 0
-      atime1: 65535
-      atime2: 0
-      atime3: 0
-      atime4: 0
-      atime5: 0
-      atime6: 0
-      atime7: 0
-      m_Mode: 0
-      m_NumColorKeys: 2
-      m_NumAlphaKeys: 2
-    numCornerVertices: 0
-    numCapVertices: 0
-    alignment: 0
-    textureMode: 0
-    shadowBias: 0.5
-    generateLightingData: 0
-  m_UseWorldSpace: 1
-  m_Loop: 0
---- !u!114 &120764914
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 120764911}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b0b3fdf3bb5ac6479475b6ec1a9d06d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  manager: {fileID: 0}
-  lineRenderer: {fileID: 120764913}
-  biopsyPoint: {fileID: 1557189995}
-  entryPoint: {fileID: 1005893039}
-  matRegular: {fileID: 0}
-  matCorrent: {fileID: 0}
-  matFalse: {fileID: 0}
 --- !u!1001 &138227285
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2030,6 +1742,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 16674827}
     m_Modifications:
+    - target: {fileID: 316800718, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
+      propertyPath: m_Name
+      value: Pressable Button (4)
+      objectReference: {fileID: 0}
     - target: {fileID: 247466359, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2047,10 +1763,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 0c4c73f326f602744bdcfff481fd6f20,
         type: 2}
-    - target: {fileID: 316800718, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
-      propertyPath: m_Name
-      value: Pressable Button (4)
-      objectReference: {fileID: 0}
     - target: {fileID: 937783100, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -2194,6 +1906,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1253844228}
     m_Modifications:
+    - target: {fileID: 6293782215702940639, guid: aef27e91ffd80b8419fddd2e0229cb75,
+        type: 3}
+      propertyPath: m_Name
+      value: PressableRoundButton (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 2897044415607412869, guid: aef27e91ffd80b8419fddd2e0229cb75,
         type: 3}
       propertyPath: m_havePropertiesChanged
@@ -2268,11 +1985,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6293782215702940639, guid: aef27e91ffd80b8419fddd2e0229cb75,
-        type: 3}
-      propertyPath: m_Name
-      value: PressableRoundButton (1)
       objectReference: {fileID: 0}
     - target: {fileID: 6293782216189254191, guid: aef27e91ffd80b8419fddd2e0229cb75,
         type: 3}
@@ -2359,6 +2071,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: HoloLens 2 and Windows Mixed Reality immersive headset can launch and display
     external apps in your app. In HoloLens 1, these buttons will exit your app then
     launch external app.
@@ -2495,7 +2209,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -3451,7 +3164,7 @@ MonoBehaviour:
   constraintOnMovement: 0
   smoothingActive: 1
   smoothingAmountOneHandManip: 0.000001
-  OnManipulationStarted:
+  onManipulationStarted:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 223310249}
@@ -3466,7 +3179,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  OnManipulationEnded:
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+  onManipulationEnded:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 223310249}
@@ -3481,12 +3196,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  OnHoverEntered:
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+  onHoverEntered:
     m_PersistentCalls:
       m_Calls: []
-  OnHoverExited:
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+  onHoverExited:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!65 &223310252
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3526,7 +3247,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -3605,6 +3325,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Green
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: afc8299d5d5bbd440a0616c8ecbc7217, type: 2}
@@ -3739,7 +3461,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -3809,6 +3530,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Slider Interaction
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: afc8299d5d5bbd440a0616c8ecbc7217, type: 2}
@@ -3943,7 +3666,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -4013,6 +3735,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: 'One-handed only
 
     Rotate about object center'
@@ -4133,7 +3857,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -4331,6 +4054,8 @@ MonoBehaviour:
   OnTouchCompleted:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.TouchEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
   OnTouchStarted:
     m_PersistentCalls:
       m_Calls:
@@ -4346,9 +4071,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.TouchEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
   OnTouchUpdated:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.TouchEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!65 &258672082
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4387,7 +4116,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -4569,6 +4297,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: HoloLens 2 Style
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: afc8299d5d5bbd440a0616c8ecbc7217, type: 2}
@@ -4687,7 +4417,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -4773,6 +4502,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: HoloLens 1 Style
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: afc8299d5d5bbd440a0616c8ecbc7217, type: 2}
@@ -4891,7 +4622,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -4977,7 +4707,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -5005,6 +4734,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 16674827}
     m_Modifications:
+    - target: {fileID: 316800718, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
+      propertyPath: m_Name
+      value: Pressable Button (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 247466359, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -5022,10 +4755,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 0c4c73f326f602744bdcfff481fd6f20,
         type: 2}
-    - target: {fileID: 316800718, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
-      propertyPath: m_Name
-      value: Pressable Button (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 937783100, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -5169,6 +4898,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2033250523}
     m_Modifications:
+    - target: {fileID: 316800718, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
+      propertyPath: m_Name
+      value: Pressable Button (3)
+      objectReference: {fileID: 0}
     - target: {fileID: 247466359, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -5176,10 +4909,6 @@ PrefabInstance:
     - target: {fileID: 247466359, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Increment
-      objectReference: {fileID: 0}
-    - target: {fileID: 316800718, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
-      propertyPath: m_Name
-      value: Pressable Button (3)
       objectReference: {fileID: 0}
     - target: {fileID: 937783100, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
       propertyPath: m_IsActive
@@ -5391,7 +5120,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -6055,6 +5783,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 997264635}
     m_Modifications:
+    - target: {fileID: 188267907179550446, guid: db5ccdf7b94c18941a0b4b230ad06560,
+        type: 3}
+      propertyPath: m_Name
+      value: PressableButtonsTestCanvas
+      objectReference: {fileID: 0}
     - target: {fileID: 188267907179550445, guid: db5ccdf7b94c18941a0b4b230ad06560,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6159,11 +5892,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 188267907179550446, guid: db5ccdf7b94c18941a0b4b230ad06560,
-        type: 3}
-      propertyPath: m_Name
-      value: PressableButtonsTestCanvas
       objectReference: {fileID: 0}
     - target: {fileID: 188267907573409033, guid: db5ccdf7b94c18941a0b4b230ad06560,
         type: 3}
@@ -6725,6 +6453,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Handles always visible
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6a84f857bec7e7345843ae29404c57ce, type: 2}
@@ -6843,7 +6573,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -6879,6 +6608,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1167763431}
     m_Modifications:
+    - target: {fileID: 2204069621426241315, guid: 3f1f46cbecbe08e46a303ccfdb5b498a,
+        type: 3}
+      propertyPath: m_Name
+      value: PressableButtonPlated32x32mm
+      objectReference: {fileID: 0}
     - target: {fileID: 2204069620958546074, guid: 3f1f46cbecbe08e46a303ccfdb5b498a,
         type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -6892,31 +6626,6 @@ PrefabInstance:
     - target: {fileID: 2204069620958546074, guid: 3f1f46cbecbe08e46a303ccfdb5b498a,
         type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2204069621426241315, guid: 3f1f46cbecbe08e46a303ccfdb5b498a,
-        type: 3}
-      propertyPath: m_Name
-      value: PressableButtonPlated32x32mm
-      objectReference: {fileID: 0}
-    - target: {fileID: 2204069621426241340, guid: 3f1f46cbecbe08e46a303ccfdb5b498a,
-        type: 3}
-      propertyPath: maxPushDistance
-      value: 0.009172167
-      objectReference: {fileID: 0}
-    - target: {fileID: 2204069621426241340, guid: 3f1f46cbecbe08e46a303ccfdb5b498a,
-        type: 3}
-      propertyPath: pressDistance
-      value: 0.0039582923
-      objectReference: {fileID: 0}
-    - target: {fileID: 2204069621426241340, guid: 3f1f46cbecbe08e46a303ccfdb5b498a,
-        type: 3}
-      propertyPath: releaseDistanceDelta
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2204069621426241341, guid: 3f1f46cbecbe08e46a303ccfdb5b498a,
-        type: 3}
-      propertyPath: InteractableOnClick
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2204069621878992557, guid: 3f1f46cbecbe08e46a303ccfdb5b498a,
@@ -7042,6 +6751,26 @@ PrefabInstance:
     - target: {fileID: 8779034279059886464, guid: 3f1f46cbecbe08e46a303ccfdb5b498a,
         type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2204069621426241340, guid: 3f1f46cbecbe08e46a303ccfdb5b498a,
+        type: 3}
+      propertyPath: maxPushDistance
+      value: 0.009172167
+      objectReference: {fileID: 0}
+    - target: {fileID: 2204069621426241340, guid: 3f1f46cbecbe08e46a303ccfdb5b498a,
+        type: 3}
+      propertyPath: pressDistance
+      value: 0.0039582923
+      objectReference: {fileID: 0}
+    - target: {fileID: 2204069621426241340, guid: 3f1f46cbecbe08e46a303ccfdb5b498a,
+        type: 3}
+      propertyPath: releaseDistanceDelta
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2204069621426241341, guid: 3f1f46cbecbe08e46a303ccfdb5b498a,
+        type: 3}
+      propertyPath: InteractableOnClick
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -7178,7 +6907,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -7217,39 +6945,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 2
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 703093937}
-          m_MethodName: PlayOneShot
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 8300000, guid: 291bf9326e517b0489c2ee53d0a6a63f,
-              type: 3}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 3
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 703093937}
-          m_MethodName: PlayOneShot
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 8300000, guid: 40ae713ddf420714bbc1a3b5c3f2eac1,
-              type: 3}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &394392975
 GameObject:
   m_ObjectHideFlags: 0
@@ -7323,7 +7018,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -7365,6 +7059,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2033250523}
     m_Modifications:
+    - target: {fileID: 316800718, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
+      propertyPath: m_Name
+      value: Pressable Button (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 247466359, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -7382,10 +7080,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 0c4c73f326f602744bdcfff481fd6f20,
         type: 2}
-    - target: {fileID: 316800718, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
-      propertyPath: m_Name
-      value: Pressable Button (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 937783100, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -7529,6 +7223,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1501782560}
     m_Modifications:
+    - target: {fileID: 6293782215702940639, guid: aef27e91ffd80b8419fddd2e0229cb75,
+        type: 3}
+      propertyPath: m_Name
+      value: LaunchBrowserButton
+      objectReference: {fileID: 0}
     - target: {fileID: 2897044415607412869, guid: aef27e91ffd80b8419fddd2e0229cb75,
         type: 3}
       propertyPath: m_havePropertiesChanged
@@ -7558,11 +7257,6 @@ PrefabInstance:
         type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: https://aka.ms/mrdocs
-      objectReference: {fileID: 0}
-    - target: {fileID: 6037652004605441796, guid: aef27e91ffd80b8419fddd2e0229cb75,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6293782215183371582, guid: aef27e91ffd80b8419fddd2e0229cb75,
         type: 3}
@@ -7634,11 +7328,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.5000002
       objectReference: {fileID: 0}
-    - target: {fileID: 6293782215702940639, guid: aef27e91ffd80b8419fddd2e0229cb75,
-        type: 3}
-      propertyPath: m_Name
-      value: LaunchBrowserButton
-      objectReference: {fileID: 0}
     - target: {fileID: 6293782216189254191, guid: aef27e91ffd80b8419fddd2e0229cb75,
         type: 3}
       propertyPath: m_havePropertiesChanged
@@ -7658,6 +7347,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6037652004605441796, guid: aef27e91ffd80b8419fddd2e0229cb75,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aef27e91ffd80b8419fddd2e0229cb75, type: 3}
@@ -7742,6 +7436,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Pan & Zoom Interaction
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: afc8299d5d5bbd440a0616c8ecbc7217, type: 2}
@@ -7876,7 +7572,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -7946,6 +7641,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Activate by Proximity
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6a84f857bec7e7345843ae29404c57ce, type: 2}
@@ -8064,7 +7761,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -8181,7 +7877,6 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -8292,7 +7987,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -8540,6 +8234,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: HoloLens 2 Style
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: afc8299d5d5bbd440a0616c8ecbc7217, type: 2}
@@ -8658,7 +8354,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -8844,7 +8539,7 @@ MonoBehaviour:
   constraintOnMovement: 0
   smoothingActive: 1
   smoothingAmountOneHandManip: 0.0001
-  OnManipulationStarted:
+  onManipulationStarted:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 563549575}
@@ -8871,7 +8566,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  OnManipulationEnded:
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+  onManipulationEnded:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 563549580}
@@ -8897,12 +8594,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  OnHoverEntered:
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+  onHoverEntered:
     m_PersistentCalls:
       m_Calls: []
-  OnHoverExited:
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+  onHoverExited:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!114 &563549577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8970,7 +8673,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -9091,7 +8793,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -9169,6 +8870,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Show all handles on Proximity
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6a84f857bec7e7345843ae29404c57ce, type: 2}
@@ -9287,7 +8990,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -9373,6 +9075,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: 'One/Two Handed
 
     Maintain original rotation'
@@ -9493,7 +9197,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -9595,7 +9298,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -9685,6 +9387,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: HoloLens 1 Style
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: afc8299d5d5bbd440a0616c8ecbc7217, type: 2}
@@ -9803,7 +9507,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -9895,7 +9598,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -9923,6 +9625,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1253844228}
     m_Modifications:
+    - target: {fileID: 6293782215702940639, guid: aef27e91ffd80b8419fddd2e0229cb75,
+        type: 3}
+      propertyPath: m_Name
+      value: PressableRoundButton (3)
+      objectReference: {fileID: 0}
     - target: {fileID: 2897044415607412869, guid: aef27e91ffd80b8419fddd2e0229cb75,
         type: 3}
       propertyPath: m_havePropertiesChanged
@@ -9997,11 +9704,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6293782215702940639, guid: aef27e91ffd80b8419fddd2e0229cb75,
-        type: 3}
-      propertyPath: m_Name
-      value: PressableRoundButton (3)
       objectReference: {fileID: 0}
     - target: {fileID: 6293782216189254191, guid: aef27e91ffd80b8419fddd2e0229cb75,
         type: 3}
@@ -10097,6 +9799,8 @@ MonoBehaviour:
   OnClick:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   Events: []
   enabledOnStart: 1
 --- !u!1 &681037090
@@ -10267,6 +9971,8 @@ MonoBehaviour:
   OnTouchCompleted:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.TouchEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
   OnTouchStarted:
     m_PersistentCalls:
       m_Calls:
@@ -10282,9 +9988,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.TouchEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
   OnTouchUpdated:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.TouchEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
   targetObjectTransform: {fileID: 320359042}
   rotateSpeed: 300
 --- !u!65 &681037095
@@ -10325,7 +10035,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -10376,7 +10085,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   importManager: {fileID: 1789741512}
-  biopsyManager: {fileID: 2107367067}
+  interactionManager: {fileID: 0}
+  biopsyManager: {fileID: 0}
   transferFunctionManager: {fileID: 1344301540}
   volumeRenderedObject: {fileID: 0}
 --- !u!4 &695167771
@@ -10391,7 +10101,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1789741513}
-  - {fileID: 2107367068}
   - {fileID: 1344301541}
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -10563,7 +10272,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -10654,7 +10362,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -10685,6 +10392,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Keyboard output.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: afc8299d5d5bbd440a0616c8ecbc7217, type: 2}
@@ -10801,6 +10510,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1253844228}
     m_Modifications:
+    - target: {fileID: 6293782215702940639, guid: aef27e91ffd80b8419fddd2e0229cb75,
+        type: 3}
+      propertyPath: m_Name
+      value: PressableRoundButton (2)
+      objectReference: {fileID: 0}
     - target: {fileID: 2897044415607412869, guid: aef27e91ffd80b8419fddd2e0229cb75,
         type: 3}
       propertyPath: m_havePropertiesChanged
@@ -10875,11 +10589,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6293782215702940639, guid: aef27e91ffd80b8419fddd2e0229cb75,
-        type: 3}
-      propertyPath: m_Name
-      value: PressableRoundButton (2)
       objectReference: {fileID: 0}
     - target: {fileID: 6293782216189254191, guid: aef27e91ffd80b8419fddd2e0229cb75,
         type: 3}
@@ -11088,7 +10797,7 @@ MonoBehaviour:
   constraintOnMovement: 0
   smoothingActive: 1
   smoothingAmountOneHandManip: 0.000001
-  OnManipulationStarted:
+  onManipulationStarted:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 775880689}
@@ -11114,7 +10823,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  OnManipulationEnded:
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+  onManipulationEnded:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 775880689}
@@ -11140,12 +10851,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  OnHoverEntered:
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+  onHoverEntered:
     m_PersistentCalls:
       m_Calls: []
-  OnHoverExited:
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+  onHoverExited:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!82 &775880689
 AudioSource:
   m_ObjectHideFlags: 0
@@ -11268,6 +10985,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetTransform: {fileID: 775880684}
+  handType: 3
+  proximityType: 3
   scaleMinimum: 0.2
   scaleMaximum: 2
   relativeToInitialState: 1
@@ -11344,6 +11063,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Manipulation Interaction
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: afc8299d5d5bbd440a0616c8ecbc7217, type: 2}
@@ -11478,7 +11199,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -11548,6 +11268,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Examples of Unity canvas UI support for near and far interactions
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6a84f857bec7e7345843ae29404c57ce, type: 2}
@@ -11682,7 +11404,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -11713,39 +11434,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 2
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 703093937}
-          m_MethodName: PlayOneShot
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 8300000, guid: 291bf9326e517b0489c2ee53d0a6a63f,
-              type: 3}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 3
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 703093937}
-          m_MethodName: PlayOneShot
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 8300000, guid: 40ae713ddf420714bbc1a3b5c3f2eac1,
-              type: 3}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1001 &815318983
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11753,6 +11441,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1167763431}
     m_Modifications:
+    - target: {fileID: 2204069621426241315, guid: 3f1f46cbecbe08e46a303ccfdb5b498a,
+        type: 3}
+      propertyPath: m_Name
+      value: PressableButtonPlated48x48mm
+      objectReference: {fileID: 0}
     - target: {fileID: 2204069620958546074, guid: 3f1f46cbecbe08e46a303ccfdb5b498a,
         type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -11766,16 +11459,6 @@ PrefabInstance:
     - target: {fileID: 2204069620958546074, guid: 3f1f46cbecbe08e46a303ccfdb5b498a,
         type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2204069621426241315, guid: 3f1f46cbecbe08e46a303ccfdb5b498a,
-        type: 3}
-      propertyPath: m_Name
-      value: PressableButtonPlated48x48mm
-      objectReference: {fileID: 0}
-    - target: {fileID: 2204069621426241341, guid: 3f1f46cbecbe08e46a303ccfdb5b498a,
-        type: 3}
-      propertyPath: InteractableOnClick
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2204069621878992557, guid: 3f1f46cbecbe08e46a303ccfdb5b498a,
@@ -11901,6 +11584,11 @@ PrefabInstance:
     - target: {fileID: 8779034279059886464, guid: 3f1f46cbecbe08e46a303ccfdb5b498a,
         type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2204069621426241341, guid: 3f1f46cbecbe08e46a303ccfdb5b498a,
+        type: 3}
+      propertyPath: InteractableOnClick
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -12073,6 +11761,8 @@ MonoBehaviour:
   OnTouchCompleted:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.TouchEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
   OnTouchStarted:
     m_PersistentCalls:
       m_Calls:
@@ -12088,9 +11778,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.TouchEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
   OnTouchUpdated:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.TouchEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
   targetObjectTransform: {fileID: 974814030}
   rotateSpeed: 300
 --- !u!65 &817099307
@@ -12131,7 +11825,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -12159,6 +11852,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1487776106}
     m_Modifications:
+    - target: {fileID: 7779420039263858270, guid: 937ce507dd7ee334ba569554e24adbdd,
+        type: 3}
+      propertyPath: m_Name
+      value: Slate
+      objectReference: {fileID: 0}
     - target: {fileID: 1484589535602960653, guid: 937ce507dd7ee334ba569554e24adbdd,
         type: 3}
       propertyPath: m_havePropertiesChanged
@@ -12238,11 +11936,6 @@ PrefabInstance:
         type: 3}
       propertyPath: assetVersion
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7779420039263858270, guid: 937ce507dd7ee334ba569554e24adbdd,
-        type: 3}
-      propertyPath: m_Name
-      value: Slate
       objectReference: {fileID: 0}
     - target: {fileID: 7779420039263858271, guid: 937ce507dd7ee334ba569554e24adbdd,
         type: 3}
@@ -12395,7 +12088,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -12615,6 +12307,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   RotateStopped:
     m_PersistentCalls:
       m_Calls:
@@ -12630,6 +12324,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   ScaleStarted:
     m_PersistentCalls:
       m_Calls:
@@ -12645,6 +12341,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   ScaleStopped:
     m_PersistentCalls:
       m_Calls:
@@ -12660,6 +12358,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &890731949 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1651193800436802, guid: 655521c3560b40f40b75cd30857eae84,
@@ -12678,39 +12378,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 2
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 703093937}
-          m_MethodName: PlayOneShot
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 8300000, guid: 291bf9326e517b0489c2ee53d0a6a63f,
-              type: 3}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 3
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 703093937}
-          m_MethodName: PlayOneShot
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 8300000, guid: 40ae713ddf420714bbc1a3b5c3f2eac1,
-              type: 3}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &904892395
 GameObject:
   m_ObjectHideFlags: 0
@@ -12792,7 +12459,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -12812,6 +12478,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4943773361295851263, guid: c0931c4da6d91ea429abedb10290dd16,
+        type: 3}
+      propertyPath: m_Name
+      value: ToggleFeaturesPanel
+      objectReference: {fileID: 0}
     - target: {fileID: 463960672768484199, guid: c0931c4da6d91ea429abedb10290dd16,
         type: 3}
       propertyPath: m_Mesh
@@ -12866,11 +12537,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_isInputParsingRequired
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4943773361295851263, guid: c0931c4da6d91ea429abedb10290dd16,
-        type: 3}
-      propertyPath: m_Name
-      value: ToggleFeaturesPanel
       objectReference: {fileID: 0}
     - target: {fileID: 5057653355905261972, guid: c0931c4da6d91ea429abedb10290dd16,
         type: 3}
@@ -13019,7 +12685,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -13191,6 +12856,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetTransform: {fileID: 949313837}
+  handType: 3
+  proximityType: 3
   scaleMinimum: 0.2
   scaleMaximum: 2
   relativeToInitialState: 1
@@ -13314,7 +12981,7 @@ MonoBehaviour:
   constraintOnMovement: 0
   smoothingActive: 1
   smoothingAmountOneHandManip: 0.0001
-  OnManipulationStarted:
+  onManipulationStarted:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 949313842}
@@ -13340,7 +13007,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  OnManipulationEnded:
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+  onManipulationEnded:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 949313842}
@@ -13366,12 +13035,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  OnHoverEntered:
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+  onHoverEntered:
     m_PersistentCalls:
       m_Calls: []
-  OnHoverExited:
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+  onHoverExited:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!114 &949313844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13445,6 +13120,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   RotateStopped:
     m_PersistentCalls:
       m_Calls:
@@ -13460,6 +13137,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   ScaleStarted:
     m_PersistentCalls:
       m_Calls:
@@ -13475,6 +13154,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   ScaleStopped:
     m_PersistentCalls:
       m_Calls:
@@ -13490,6 +13171,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &974814029
 GameObject:
   m_ObjectHideFlags: 0
@@ -13547,7 +13230,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -13609,112 +13291,6 @@ Transform:
   m_Father: {fileID: 1698852960}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!1 &1005893037
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1005893038}
-  - component: {fileID: 1005893042}
-  - component: {fileID: 1005893041}
-  - component: {fileID: 1005893040}
-  - component: {fileID: 1005893039}
-  m_Layer: 0
-  m_Name: EntryPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1005893038
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1005893037}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.1, y: 0, z: 0.2}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
-  m_Children: []
-  m_Father: {fileID: 2107367068}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1005893039
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1005893037}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1af95d28cda5f9b4ab4f6a03bffef6de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  initialVector: {x: 0, y: 0, z: 0}
---- !u!135 &1005893040
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1005893037}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &1005893041
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1005893037}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!33 &1005893042
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1005893037}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1016469058
 GameObject:
   m_ObjectHideFlags: 0
@@ -13872,7 +13448,7 @@ MonoBehaviour:
   constraintOnMovement: 0
   smoothingActive: 1
   smoothingAmountOneHandManip: 0.0001
-  OnManipulationStarted:
+  onManipulationStarted:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1016469060}
@@ -13899,7 +13475,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  OnManipulationEnded:
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+  onManipulationEnded:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1016469060}
@@ -13926,12 +13504,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  OnHoverEntered:
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+  onHoverEntered:
     m_PersistentCalls:
       m_Calls: []
-  OnHoverExited:
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+  onHoverExited:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!114 &1016469062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13999,7 +13583,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -14301,6 +13884,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Example of panning and zooming 2D content using HandInteractionPanZoom.cs
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6a84f857bec7e7345843ae29404c57ce, type: 2}
@@ -14435,7 +14020,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -14466,39 +14050,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 2
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 703093937}
-          m_MethodName: PlayOneShot
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 8300000, guid: 291bf9326e517b0489c2ee53d0a6a63f,
-              type: 3}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 3
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 703093937}
-          m_MethodName: PlayOneShot
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 8300000, guid: 40ae713ddf420714bbc1a3b5c3f2eac1,
-              type: 3}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &1087739255
 GameObject:
   m_ObjectHideFlags: 0
@@ -14512,6 +14063,8 @@ GameObject:
   - component: {fileID: 1087739260}
   - component: {fileID: 1087739259}
   - component: {fileID: 1087739258}
+  - component: {fileID: 1087739262}
+  - component: {fileID: 1087739257}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -14533,6 +14086,29 @@ Transform:
   m_Father: {fileID: 1395862314}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1087739257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087739255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf98dd1206224111a38765365e98e207, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  setCursorInvisibleWhenFocusLocked: 0
+  maxGazeCollisionDistance: 10
+  raycastLayerMasks:
+  - serializedVersion: 2
+    m_Bits: 4294967291
+  stabilizer:
+    storedStabilitySamples: 60
+  gazeTransform: {fileID: 0}
+  minHeadVelocityThreshold: 0.5
+  maxHeadVelocityThreshold: 2
+  useEyeTracking: 1
 --- !u!114 &1087739258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14564,9 +14140,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
-  m_sendNavigationEvents: 1
-  m_DragThreshold: 10
 --- !u!81 &1087739260
 AudioListener:
   m_ObjectHideFlags: 0
@@ -14618,6 +14191,21 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &1087739262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087739255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -619905303, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
 --- !u!1001 &1106542584
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14625,6 +14213,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1456262916}
     m_Modifications:
+    - target: {fileID: 7307063430618434862, guid: 1093263a89abe47499cccf7dcb08effb,
+        type: 3}
+      propertyPath: m_Name
+      value: PinchSliderColorBlue
+      objectReference: {fileID: 0}
     - target: {fileID: 7307063430008138807, guid: 1093263a89abe47499cccf7dcb08effb,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -14860,11 +14453,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7307063430618434862, guid: 1093263a89abe47499cccf7dcb08effb,
-        type: 3}
-      propertyPath: m_Name
-      value: PinchSliderColorBlue
-      objectReference: {fileID: 0}
     - target: {fileID: 7307063430758334042, guid: 1093263a89abe47499cccf7dcb08effb,
         type: 3}
       propertyPath: m_Name
@@ -15038,6 +14626,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Hand Interaction Examples
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6a84f857bec7e7345843ae29404c57ce, type: 2}
@@ -15172,7 +14762,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -15242,6 +14831,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Examples of using ManipulationHandler.cs for the near/far and one/two-handed
     manipulation
   m_isRightToLeft: 0
@@ -15377,7 +14968,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -15456,6 +15046,8 @@ MonoBehaviour:
   OnClick:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   Events: []
   enabledOnStart: 1
 --- !u!1 &1167763430
@@ -15609,6 +15201,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Press Interaction
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: afc8299d5d5bbd440a0616c8ecbc7217, type: 2}
@@ -15743,7 +15337,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -15763,6 +15356,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1167763431}
     m_Modifications:
+    - target: {fileID: 2204069621426241315, guid: 3f1f46cbecbe08e46a303ccfdb5b498a,
+        type: 3}
+      propertyPath: m_Name
+      value: PressableButtonPlated40x40mm
+      objectReference: {fileID: 0}
     - target: {fileID: 2204069620958546074, guid: 3f1f46cbecbe08e46a303ccfdb5b498a,
         type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -15776,16 +15374,6 @@ PrefabInstance:
     - target: {fileID: 2204069620958546074, guid: 3f1f46cbecbe08e46a303ccfdb5b498a,
         type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2204069621426241315, guid: 3f1f46cbecbe08e46a303ccfdb5b498a,
-        type: 3}
-      propertyPath: m_Name
-      value: PressableButtonPlated40x40mm
-      objectReference: {fileID: 0}
-    - target: {fileID: 2204069621426241341, guid: 3f1f46cbecbe08e46a303ccfdb5b498a,
-        type: 3}
-      propertyPath: InteractableOnClick
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2204069621878992557, guid: 3f1f46cbecbe08e46a303ccfdb5b498a,
@@ -15911,6 +15499,11 @@ PrefabInstance:
     - target: {fileID: 8779034279059886464, guid: 3f1f46cbecbe08e46a303ccfdb5b498a,
         type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2204069621426241341, guid: 3f1f46cbecbe08e46a303ccfdb5b498a,
+        type: 3}
+      propertyPath: InteractableOnClick
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -16045,6 +15638,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Touch Interaction
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: afc8299d5d5bbd440a0616c8ecbc7217, type: 2}
@@ -16179,7 +15774,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -16249,6 +15843,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Bounding Box
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: afc8299d5d5bbd440a0616c8ecbc7217, type: 2}
@@ -16383,7 +15979,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -16403,6 +15998,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2033250523}
     m_Modifications:
+    - target: {fileID: 316800718, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
+      propertyPath: m_Name
+      value: Pressable Button (2)
+      objectReference: {fileID: 0}
     - target: {fileID: 247466359, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -16410,10 +16009,6 @@ PrefabInstance:
     - target: {fileID: 247466359, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Increment
-      objectReference: {fileID: 0}
-    - target: {fileID: 316800718, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
-      propertyPath: m_Name
-      value: Pressable Button (2)
       objectReference: {fileID: 0}
     - target: {fileID: 937783100, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
       propertyPath: m_IsActive
@@ -16585,6 +16180,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1167763431}
     m_Modifications:
+    - target: {fileID: 2204069621426241315, guid: 3f1f46cbecbe08e46a303ccfdb5b498a,
+        type: 3}
+      propertyPath: m_Name
+      value: PressableButtonPlated48x48mm
+      objectReference: {fileID: 0}
     - target: {fileID: 2204069620958546074, guid: 3f1f46cbecbe08e46a303ccfdb5b498a,
         type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -16598,16 +16198,6 @@ PrefabInstance:
     - target: {fileID: 2204069620958546074, guid: 3f1f46cbecbe08e46a303ccfdb5b498a,
         type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2204069621426241315, guid: 3f1f46cbecbe08e46a303ccfdb5b498a,
-        type: 3}
-      propertyPath: m_Name
-      value: PressableButtonPlated48x48mm
-      objectReference: {fileID: 0}
-    - target: {fileID: 2204069621426241341, guid: 3f1f46cbecbe08e46a303ccfdb5b498a,
-        type: 3}
-      propertyPath: InteractableOnClick
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2204069621878992557, guid: 3f1f46cbecbe08e46a303ccfdb5b498a,
@@ -16735,6 +16325,11 @@ PrefabInstance:
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2204069621426241341, guid: 3f1f46cbecbe08e46a303ccfdb5b498a,
+        type: 3}
+      propertyPath: InteractableOnClick
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f1f46cbecbe08e46a303ccfdb5b498a, type: 3}
 --- !u!4 &1254642764 stripped
@@ -16814,6 +16409,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: 0.50
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: afc8299d5d5bbd440a0616c8ecbc7217, type: 2}
@@ -16932,7 +16529,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -16979,39 +16575,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 2
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 703093937}
-          m_MethodName: PlayOneShot
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 8300000, guid: 3448d870fb0a1b24ab44f20f2e1f982d,
-              type: 3}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 3
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 703093937}
-          m_MethodName: PlayOneShot
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 8300000, guid: e35ddb0c8710c2949a37a6975f6847db,
-              type: 3}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1001 &1311101688
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17019,6 +16582,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 16674827}
     m_Modifications:
+    - target: {fileID: 316800718, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
+      propertyPath: m_Name
+      value: Pressable Button (3)
+      objectReference: {fileID: 0}
     - target: {fileID: 247466359, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -17026,10 +16593,6 @@ PrefabInstance:
     - target: {fileID: 247466359, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Increment
-      objectReference: {fileID: 0}
-    - target: {fileID: 316800718, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
-      propertyPath: m_Name
-      value: Pressable Button (3)
       objectReference: {fileID: 0}
     - target: {fileID: 937783100, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
       propertyPath: m_IsActive
@@ -17173,6 +16736,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1167763431}
     m_Modifications:
+    - target: {fileID: 2204069621426241315, guid: 3f1f46cbecbe08e46a303ccfdb5b498a,
+        type: 3}
+      propertyPath: m_Name
+      value: PressableButtonPlated40x40mm
+      objectReference: {fileID: 0}
     - target: {fileID: 2204069620958546074, guid: 3f1f46cbecbe08e46a303ccfdb5b498a,
         type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -17186,16 +16754,6 @@ PrefabInstance:
     - target: {fileID: 2204069620958546074, guid: 3f1f46cbecbe08e46a303ccfdb5b498a,
         type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2204069621426241315, guid: 3f1f46cbecbe08e46a303ccfdb5b498a,
-        type: 3}
-      propertyPath: m_Name
-      value: PressableButtonPlated40x40mm
-      objectReference: {fileID: 0}
-    - target: {fileID: 2204069621426241341, guid: 3f1f46cbecbe08e46a303ccfdb5b498a,
-        type: 3}
-      propertyPath: InteractableOnClick
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2204069621878992557, guid: 3f1f46cbecbe08e46a303ccfdb5b498a,
@@ -17323,6 +16881,11 @@ PrefabInstance:
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2204069621426241341, guid: 3f1f46cbecbe08e46a303ccfdb5b498a,
+        type: 3}
+      propertyPath: InteractableOnClick
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f1f46cbecbe08e46a303ccfdb5b498a, type: 3}
 --- !u!1 &1336306725
@@ -17382,6 +16945,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: 'Examples of touch events using HandInteractionTouch.cs
 
     Only works with HoloLens 2''s articulated hand'
@@ -17518,7 +17083,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -17580,7 +17144,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 695167771}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1349317002
 PrefabInstance:
@@ -17710,7 +17274,7 @@ MonoBehaviour:
   constraintOnMovement: 0
   smoothingActive: 1
   smoothingAmountOneHandManip: 0.001
-  OnManipulationStarted:
+  onManipulationStarted:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1349317009}
@@ -17769,7 +17333,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-  OnManipulationEnded:
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+  onManipulationEnded:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1349317009}
@@ -17828,12 +17394,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  OnHoverEntered:
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+  onHoverEntered:
     m_PersistentCalls:
       m_Calls: []
-  OnHoverExited:
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+  onHoverExited:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!65 &1349317008
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18000,6 +17572,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: HoloLens 2 Style
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: afc8299d5d5bbd440a0616c8ecbc7217, type: 2}
@@ -18118,7 +17692,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -18705,6 +18278,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Launch Edge Browser
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6a84f857bec7e7345843ae29404c57ce, type: 2}
@@ -18839,7 +18414,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -19028,7 +18602,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -19159,6 +18732,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetTransform: {fileID: 1461408771}
+  handType: 3
+  proximityType: 3
   scaleMinimum: 0.2
   scaleMaximum: 2
   relativeToInitialState: 1
@@ -19186,7 +18761,7 @@ MonoBehaviour:
   constraintOnMovement: 0
   smoothingActive: 1
   smoothingAmountOneHandManip: 0.001
-  OnManipulationStarted:
+  onManipulationStarted:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1461408776}
@@ -19212,7 +18787,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  OnManipulationEnded:
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+  onManipulationEnded:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1461408776}
@@ -19238,12 +18815,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  OnHoverEntered:
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+  onHoverEntered:
     m_PersistentCalls:
       m_Calls: []
-  OnHoverExited:
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+  onHoverExited:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!114 &1461408779
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19314,6 +18897,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   RotateStopped:
     m_PersistentCalls:
       m_Calls:
@@ -19329,6 +18914,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   ScaleStarted:
     m_PersistentCalls:
       m_Calls:
@@ -19344,6 +18931,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   ScaleStopped:
     m_PersistentCalls:
       m_Calls:
@@ -19359,6 +18948,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1478918843
 GameObject:
   m_ObjectHideFlags: 0
@@ -19416,7 +19007,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -19680,6 +19270,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetTransform: {fileID: 0}
+  handType: 3
+  proximityType: 3
   scaleMinimum: 0.3
   scaleMaximum: 5
   relativeToInitialState: 1
@@ -19784,7 +19376,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -19916,7 +19507,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -19961,7 +19551,7 @@ MonoBehaviour:
   constraintOnMovement: 0
   smoothingActive: 1
   smoothingAmountOneHandManip: 0.001
-  OnManipulationStarted:
+  onManipulationStarted:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 889023687}
@@ -19987,7 +19577,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  OnManipulationEnded:
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+  onManipulationEnded:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 889023687}
@@ -20013,12 +19605,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  OnHoverEntered:
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+  onHoverEntered:
     m_PersistentCalls:
       m_Calls: []
-  OnHoverExited:
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+  onHoverExited:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!1001 &1542015560
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20489,112 +20087,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pivotAxis: 6
   targetTransform: {fileID: 0}
---- !u!1 &1557189993
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1557189994}
-  - component: {fileID: 1557189998}
-  - component: {fileID: 1557189997}
-  - component: {fileID: 1557189996}
-  - component: {fileID: 1557189995}
-  m_Layer: 0
-  m_Name: BiopsyPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1557189994
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1557189993}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.2}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
-  m_Children: []
-  m_Father: {fileID: 2107367068}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1557189995
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1557189993}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3324f7aa3e8aadf469836d3622b302c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  initialVector: {x: 0, y: 0, z: 0}
---- !u!135 &1557189996
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1557189993}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &1557189997
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1557189993}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!33 &1557189998
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1557189993}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1577482686
 GameObject:
   m_ObjectHideFlags: 0
@@ -20666,6 +20158,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: 0.50
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: afc8299d5d5bbd440a0616c8ecbc7217, type: 2}
@@ -20784,7 +20278,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -21036,7 +20529,7 @@ MonoBehaviour:
   constraintOnMovement: 0
   smoothingActive: 1
   smoothingAmountOneHandManip: 0.0001
-  OnManipulationStarted:
+  onManipulationStarted:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1608872556}
@@ -21063,7 +20556,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  OnManipulationEnded:
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+  onManipulationEnded:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1608872556}
@@ -21090,12 +20585,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  OnHoverEntered:
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+  onHoverEntered:
     m_PersistentCalls:
       m_Calls: []
-  OnHoverExited:
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+  onHoverExited:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!114 &1608872558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21163,7 +20664,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -21352,6 +20852,8 @@ MonoBehaviour:
   OnTouchCompleted:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.TouchEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
   OnTouchStarted:
     m_PersistentCalls:
       m_Calls:
@@ -21367,9 +20869,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.TouchEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
   OnTouchUpdated:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.TouchEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
   targetObjectTransform: {fileID: 2019239148}
   rotateSpeed: 300
 --- !u!65 &1633489052
@@ -21410,7 +20916,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -21587,7 +21092,7 @@ MonoBehaviour:
   constraintOnMovement: 0
   smoothingActive: 1
   smoothingAmountOneHandManip: 0.0001
-  OnManipulationStarted:
+  onManipulationStarted:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1642486405}
@@ -21613,7 +21118,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  OnManipulationEnded:
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+  onManipulationEnded:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1642486405}
@@ -21639,12 +21146,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  OnHoverEntered:
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+  onHoverEntered:
     m_PersistentCalls:
       m_Calls: []
-  OnHoverExited:
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+  onHoverExited:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!114 &1642486407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21718,6 +21231,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   RotateStopped:
     m_PersistentCalls:
       m_Calls:
@@ -21733,6 +21248,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   ScaleStarted:
     m_PersistentCalls:
       m_Calls:
@@ -21748,6 +21265,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   ScaleStopped:
     m_PersistentCalls:
       m_Calls:
@@ -21763,6 +21282,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &1642486408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21788,6 +21309,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetTransform: {fileID: 537276353}
+  handType: 3
+  proximityType: 3
   scaleMinimum: 0.3
   scaleMaximum: 5
   relativeToInitialState: 1
@@ -21798,6 +21321,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 16674827}
     m_Modifications:
+    - target: {fileID: 316800718, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
+      propertyPath: m_Name
+      value: Pressable Button (2)
+      objectReference: {fileID: 0}
     - target: {fileID: 247466359, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -21805,10 +21332,6 @@ PrefabInstance:
     - target: {fileID: 247466359, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Increment
-      objectReference: {fileID: 0}
-    - target: {fileID: 316800718, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
-      propertyPath: m_Name
-      value: Pressable Button (2)
       objectReference: {fileID: 0}
     - target: {fileID: 937783100, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
       propertyPath: m_IsActive
@@ -22103,18 +21626,26 @@ MonoBehaviour:
   constraintOnMovement: 0
   smoothingActive: 1
   smoothingAmountOneHandManip: 0.000001
-  OnManipulationStarted:
+  onManipulationStarted:
     m_PersistentCalls:
       m_Calls: []
-  OnManipulationEnded:
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+  onManipulationEnded:
     m_PersistentCalls:
       m_Calls: []
-  OnHoverEntered:
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+  onHoverEntered:
     m_PersistentCalls:
       m_Calls: []
-  OnHoverExited:
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+  onHoverExited:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!114 &1666569909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22152,7 +21683,7 @@ MonoBehaviour:
   constraintOnMovement: 0
   smoothingActive: 1
   smoothingAmountOneHandManip: 0.000001
-  OnManipulationStarted:
+  onManipulationStarted:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1666569911}
@@ -22167,7 +21698,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  OnManipulationEnded:
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+  onManipulationEnded:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1666569911}
@@ -22182,12 +21715,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  OnHoverEntered:
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+  onHoverEntered:
     m_PersistentCalls:
       m_Calls: []
-  OnHoverExited:
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+  onHoverExited:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!82 &1666569911
 AudioSource:
   m_ObjectHideFlags: 0
@@ -22354,6 +21893,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Unity UI Examples
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: afc8299d5d5bbd440a0616c8ecbc7217, type: 2}
@@ -22488,7 +22029,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -22657,6 +22197,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1501782560}
     m_Modifications:
+    - target: {fileID: 6293782215702940639, guid: aef27e91ffd80b8419fddd2e0229cb75,
+        type: 3}
+      propertyPath: m_Name
+      value: LaunchSettingsButton
+      objectReference: {fileID: 0}
     - target: {fileID: 2897044415607412869, guid: aef27e91ffd80b8419fddd2e0229cb75,
         type: 3}
       propertyPath: m_havePropertiesChanged
@@ -22686,11 +22231,6 @@ PrefabInstance:
         type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: ms-settings://
-      objectReference: {fileID: 0}
-    - target: {fileID: 6037652004605441796, guid: aef27e91ffd80b8419fddd2e0229cb75,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6293782215183371582, guid: aef27e91ffd80b8419fddd2e0229cb75,
         type: 3}
@@ -22762,11 +22302,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.5000002
       objectReference: {fileID: 0}
-    - target: {fileID: 6293782215702940639, guid: aef27e91ffd80b8419fddd2e0229cb75,
-        type: 3}
-      propertyPath: m_Name
-      value: LaunchSettingsButton
-      objectReference: {fileID: 0}
     - target: {fileID: 6293782216189254191, guid: aef27e91ffd80b8419fddd2e0229cb75,
         type: 3}
       propertyPath: m_havePropertiesChanged
@@ -22786,6 +22321,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6037652004605441796, guid: aef27e91ffd80b8419fddd2e0229cb75,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aef27e91ffd80b8419fddd2e0229cb75, type: 3}
@@ -22820,6 +22360,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1167763431}
     m_Modifications:
+    - target: {fileID: 2204069621426241315, guid: 3f1f46cbecbe08e46a303ccfdb5b498a,
+        type: 3}
+      propertyPath: m_Name
+      value: PressableButtonPlated32x32mm
+      objectReference: {fileID: 0}
     - target: {fileID: 2204069620958546074, guid: 3f1f46cbecbe08e46a303ccfdb5b498a,
         type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -22834,26 +22379,6 @@ PrefabInstance:
         type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2204069621426241315, guid: 3f1f46cbecbe08e46a303ccfdb5b498a,
-        type: 3}
-      propertyPath: m_Name
-      value: PressableButtonPlated32x32mm
-      objectReference: {fileID: 0}
-    - target: {fileID: 2204069621426241340, guid: 3f1f46cbecbe08e46a303ccfdb5b498a,
-        type: 3}
-      propertyPath: maxPushDistance
-      value: 0.009172167
-      objectReference: {fileID: 0}
-    - target: {fileID: 2204069621426241340, guid: 3f1f46cbecbe08e46a303ccfdb5b498a,
-        type: 3}
-      propertyPath: pressDistance
-      value: 0.0039582923
-      objectReference: {fileID: 0}
-    - target: {fileID: 2204069621426241340, guid: 3f1f46cbecbe08e46a303ccfdb5b498a,
-        type: 3}
-      propertyPath: releaseDistanceDelta
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2204069621878992557, guid: 3f1f46cbecbe08e46a303ccfdb5b498a,
         type: 3}
@@ -22984,6 +22509,21 @@ PrefabInstance:
         type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2204069621426241340, guid: 3f1f46cbecbe08e46a303ccfdb5b498a,
+        type: 3}
+      propertyPath: maxPushDistance
+      value: 0.009172167
+      objectReference: {fileID: 0}
+    - target: {fileID: 2204069621426241340, guid: 3f1f46cbecbe08e46a303ccfdb5b498a,
+        type: 3}
+      propertyPath: pressDistance
+      value: 0.0039582923
+      objectReference: {fileID: 0}
+    - target: {fileID: 2204069621426241340, guid: 3f1f46cbecbe08e46a303ccfdb5b498a,
+        type: 3}
+      propertyPath: releaseDistanceDelta
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f1f46cbecbe08e46a303ccfdb5b498a, type: 3}
@@ -23192,7 +22732,7 @@ MonoBehaviour:
   constraintOnMovement: 0
   smoothingActive: 1
   smoothingAmountOneHandManip: 0.001
-  OnManipulationStarted:
+  onManipulationStarted:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1721301732}
@@ -23207,7 +22747,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  OnManipulationEnded:
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+  onManipulationEnded:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1721301732}
@@ -23222,12 +22764,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  OnHoverEntered:
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+  onHoverEntered:
     m_PersistentCalls:
       m_Calls: []
-  OnHoverExited:
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+  onHoverExited:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!114 &1721301734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23298,6 +22846,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   RotateStopped:
     m_PersistentCalls:
       m_Calls:
@@ -23313,6 +22863,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   ScaleStarted:
     m_PersistentCalls:
       m_Calls:
@@ -23328,6 +22880,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   ScaleStopped:
     m_PersistentCalls:
       m_Calls:
@@ -23343,6 +22897,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!65 &1721301735
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23381,7 +22937,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -23415,6 +22970,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetTransform: {fileID: 0}
+  handType: 3
+  proximityType: 3
   scaleMinimum: 0.3
   scaleMaximum: 5
   relativeToInitialState: 1
@@ -23447,7 +23004,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83d9acc7968244a8886f3af591305bcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activeProfile: {fileID: 11400000, guid: 365300222ffc03048aba6aa02a569a9c, type: 2}
+  activeProfile: {fileID: 11400000, guid: 7e7c962b9eb9dfa44993d5b2f2576752, type: 2}
 --- !u!4 &1721422931
 Transform:
   m_ObjectHideFlags: 0
@@ -23578,6 +23135,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: PinchSlider.cs
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6a84f857bec7e7345843ae29404c57ce, type: 2}
@@ -23712,7 +23271,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -24252,6 +23810,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Blue
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: afc8299d5d5bbd440a0616c8ecbc7217, type: 2}
@@ -24386,7 +23946,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -24456,6 +24015,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Keyboard Interaction
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: afc8299d5d5bbd440a0616c8ecbc7217, type: 2}
@@ -24590,7 +24151,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -24708,6 +24268,8 @@ MonoBehaviour:
   OnClick:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   Events: []
   enabledOnStart: 1
 --- !u!1 &1958878974
@@ -24766,7 +24328,6 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -24897,6 +24458,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 377361798}
     m_Modifications:
+    - target: {fileID: 7980448365335647764, guid: 3a1a906d65a695048aa9dcd5216dbecd,
+        type: 3}
+      propertyPath: m_Name
+      value: MixedRealityKeyboardPreview
+      objectReference: {fileID: 0}
     - target: {fileID: 589600043868026197, guid: 3a1a906d65a695048aa9dcd5216dbecd,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -25036,11 +24602,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_textInfo.pageCount
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7980448365335647764, guid: 3a1a906d65a695048aa9dcd5216dbecd,
-        type: 3}
-      propertyPath: m_Name
-      value: MixedRealityKeyboardPreview
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a1a906d65a695048aa9dcd5216dbecd, type: 3}
@@ -25310,6 +24871,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   RotateStopped:
     m_PersistentCalls:
       m_Calls:
@@ -25325,6 +24888,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   ScaleStarted:
     m_PersistentCalls:
       m_Calls:
@@ -25340,6 +24905,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   ScaleStopped:
     m_PersistentCalls:
       m_Calls:
@@ -25355,6 +24922,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &1984437766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25368,6 +24937,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetTransform: {fileID: 1984437770}
+  handType: 3
+  proximityType: 3
   scaleMinimum: 0.3
   scaleMaximum: 5
   relativeToInitialState: 1
@@ -25408,7 +24979,7 @@ MonoBehaviour:
   constraintOnMovement: 0
   smoothingActive: 1
   smoothingAmountOneHandManip: 0.001
-  OnManipulationStarted:
+  onManipulationStarted:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1984437764}
@@ -25434,7 +25005,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  OnManipulationEnded:
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+  onManipulationEnded:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1984437764}
@@ -25460,12 +25033,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  OnHoverEntered:
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+  onHoverEntered:
     m_PersistentCalls:
       m_Calls: []
-  OnHoverExited:
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+  onHoverExited:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!4 &1984437770 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: e963263242b6cbb4bbbf279f0c0e7789,
@@ -25542,6 +25121,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Flattened Bounding Box
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6a84f857bec7e7345843ae29404c57ce, type: 2}
@@ -25660,7 +25241,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -25746,7 +25326,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -25886,6 +25465,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Launch External UWP Apps
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: afc8299d5d5bbd440a0616c8ecbc7217, type: 2}
@@ -26020,7 +25601,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -26047,10 +25627,6 @@ PrefabInstance:
     - target: {fileID: 100002, guid: e963263242b6cbb4bbbf279f0c0e7789, type: 3}
       propertyPath: m_Name
       value: CoffeeCup
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: e963263242b6cbb4bbbf279f0c0e7789, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.896
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: e963263242b6cbb4bbbf279f0c0e7789, type: 3}
       propertyPath: m_LocalPosition.x
@@ -26108,6 +25684,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: d5334c45caee46be937b095a1e977dc6, type: 2}
+    - target: {fileID: 400000, guid: e963263242b6cbb4bbbf279f0c0e7789, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.896
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e963263242b6cbb4bbbf279f0c0e7789, type: 3}
 --- !u!4 &2045373141 stripped
@@ -26159,7 +25739,7 @@ MonoBehaviour:
   constraintOnMovement: 0
   smoothingActive: 1
   smoothingAmountOneHandManip: 0.0001
-  OnManipulationStarted:
+  onManipulationStarted:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2045373146}
@@ -26174,7 +25754,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  OnManipulationEnded:
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+  onManipulationEnded:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2045373146}
@@ -26189,12 +25771,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  OnHoverEntered:
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+  onHoverEntered:
     m_PersistentCalls:
       m_Calls: []
-  OnHoverExited:
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+  onHoverExited:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
+      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!65 &2045373145
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26390,6 +25978,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: This example scene demonstrates various types of hand tracking interactions
     such as Press, Touch, Grab, Scroll, Move, Rotate, and Scale. You can find common
     UI and interaction building blocks that are part of HoloLens shell.
@@ -26526,7 +26116,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -26602,6 +26191,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Explicit Adjust Mode with AppBar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6a84f857bec7e7345843ae29404c57ce, type: 2}
@@ -26720,7 +26311,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -26749,57 +26339,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2088339754}
   m_Mesh: {fileID: 0}
---- !u!1 &2107367066
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2107367068}
-  - component: {fileID: 2107367067}
-  m_Layer: 0
-  m_Name: BiopsyManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2107367067
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2107367066}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ab3c67fad94e3d4cbc308b4018e4591, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  biopsyTool: {fileID: 103894664}
-  biopsyPath: {fileID: 120764914}
-  biopsyPoint: {fileID: 1557189995}
-  entryPoint: {fileID: 1005893039}
---- !u!4 &2107367068
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2107367066}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 103894668}
-  - {fileID: 1557189994}
-  - {fileID: 1005893038}
-  - {fileID: 120764912}
-  m_Father: {fileID: 695167771}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2115258014
 GameObject:
   m_ObjectHideFlags: 0
@@ -26857,6 +26396,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: 'Standard UI for resizing and rotating an object
 
     BoundingBox.cs + ManipulationHandler.cs'
@@ -26993,7 +26534,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -27063,6 +26603,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Opens the native keyboard provided by OS
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6a84f857bec7e7345843ae29404c57ce, type: 2}
@@ -27197,7 +26739,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -27267,6 +26808,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: HoloLens 2 buttons and other custom button examples using PressableButton.cs
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6a84f857bec7e7345843ae29404c57ce, type: 2}
@@ -27401,7 +26944,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -27421,21 +26963,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1456262916}
     m_Modifications:
-    - target: {fileID: 422016688687941590, guid: 1f166b767b73ac84f98bc1cd0286a548,
+    - target: {fileID: 6970633827670306106, guid: 1f166b767b73ac84f98bc1cd0286a548,
         type: 3}
-      propertyPath: m_Mesh
-      value: 
+      propertyPath: m_Name
+      value: PinchSliderColorRed
       objectReference: {fileID: 0}
-    - target: {fileID: 422016689433853360, guid: 1f166b767b73ac84f98bc1cd0286a548,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6970633827670306100, guid: 1f166b767b73ac84f98bc1cd0286a548,
-        type: 3}
-      propertyPath: OnValueUpdated.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 258672085}
     - target: {fileID: 6970633827670306103, guid: 1f166b767b73ac84f98bc1cd0286a548,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -27491,11 +27023,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6970633827670306106, guid: 1f166b767b73ac84f98bc1cd0286a548,
+    - target: {fileID: 422016689433853360, guid: 1f166b767b73ac84f98bc1cd0286a548,
         type: 3}
-      propertyPath: m_Name
-      value: PinchSliderColorRed
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 422016688687941590, guid: 1f166b767b73ac84f98bc1cd0286a548,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6970633827670306100, guid: 1f166b767b73ac84f98bc1cd0286a548,
+        type: 3}
+      propertyPath: OnValueUpdated.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 258672085}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f166b767b73ac84f98bc1cd0286a548, type: 3}
 --- !u!4 &7307063430729852077 stripped
