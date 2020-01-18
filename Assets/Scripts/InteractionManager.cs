@@ -18,18 +18,7 @@ public class InteractionManager : MonoBehaviour
 
     public void Update()
     {
-        UpdatePatientID();
+        patientID.UpdateInterface();
     }
 
-    public void UpdatePatientID()
-    {
-        if (DistanceFromCamera(overlay.transform.position) > 0.5f)
-        {
-            patientID.enabled = false;
-        }
-        else
-        {
-            patientID.enabled = true;
-        }
-    }
 }
