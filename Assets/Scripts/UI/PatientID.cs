@@ -29,25 +29,6 @@ public class PatientID : UIObject
         }
     }
 
-    public void OnEnable()
-    {
-        Debug.Log("Fade In");
-        int children = transform.childCount;
-        for (int i = 0; i < children; ++i)
-        {
-            transform.GetChild(i).gameObject.SetActive(true);
-        }
-    }
-
-    public void OnDisable()
-    {
-        Debug.Log("Fade Out");
-        int children = transform.childCount;
-        for (int i = 0; i < children; ++i)
-        {
-            transform.GetChild(i).gameObject.SetActive(false);
-        }
-    }
 
     // public IEnumerator FadeIn()
     // {

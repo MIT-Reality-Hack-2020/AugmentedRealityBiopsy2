@@ -49,12 +49,9 @@ public class BiopsyTool : MonoBehaviour
 
     public void Update()
     {
-        //GameObject pointer = GameObject.Find("Right_DefaultControllerPointer(Clone)");
-        GameObject thumbTipGO = GameObject.Find("ThumbTip Proxy Transform");
-
         GameObject indexFingerKnuckle = GameObject.Find("IndexKnuckle Proxy Transform");
 
-        if (Wrist() && RightIndexFinger() && thumbTipGO && indexFingerKnuckle
+        if (RightIndexFinger() && indexFingerKnuckle
         && Program.instance.interactionManager.currentPhase == Phase.close)
         {
             biopsyRunning = true;

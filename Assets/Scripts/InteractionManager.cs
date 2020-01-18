@@ -47,7 +47,16 @@ public class InteractionManager : MonoBehaviour
         }
         else if(DistanceFromCamera() < 0.5f)
         {
-            currentPhase = Phase.close;    
+            currentPhase = Phase.close;  
+        }
+
+        if(DistanceFromCamera() > 0.5f)
+        {
+            Program.instance.aROverlay.currentStyle = OverlayStyle.skinned;
+        }
+        else
+        {
+            Program.instance.aROverlay.currentStyle = OverlayStyle.mesh;
         }
     }
 

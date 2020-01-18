@@ -20,4 +20,22 @@ public class UIObject : MonoBehaviour
 
     }
     
+    public void OnEnable()
+    {
+        int children = transform.childCount;
+        for (int i = 0; i < children; ++i)
+        {
+            transform.GetChild(i).gameObject.SetActive(true);
+        }
+    }
+
+    public void OnDisable()
+    {
+        int children = transform.childCount;
+        for (int i = 0; i < children; ++i)
+        {
+            transform.GetChild(i).gameObject.SetActive(false);
+        }
+    }
+
 }
