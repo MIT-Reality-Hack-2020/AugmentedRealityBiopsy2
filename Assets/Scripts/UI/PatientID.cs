@@ -12,6 +12,7 @@ public class PatientID : UIObject
 
     public override void UpdateInterface()
     {
+        base.UpdateInterface();
         if (manager.currentPhase == Phase.far)
         {
             enabled = false;

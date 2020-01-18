@@ -5,12 +5,9 @@ using UnityEngine;
 public class BiopsyTool : MonoBehaviour
 {
     public BiopsyManager manager;
-
-    public GameObject front;
-    public GameObject back;
-    public BiopsyToolExtension extension;
-
     public LineRenderer rod;
+
+    public Vector3 toolTip;
 
     public GameObject RightIndexFinger()
     {
@@ -26,24 +23,48 @@ public class BiopsyTool : MonoBehaviour
         {
             return null;
         }
-
     }
+
+    public float DistanceFromTumor()
+    {
+        return Vector3.Distance(
+            Program.instance.aROverlay.tumor.transform.position,
+            toolTip
+        );
+    }
+
     public void Update()
     {
 
         //GameObject pointer = GameObject.Find("Right_DefaultControllerPointer(Clone)");
+        GameObject thumbTipGO = GameObject.Find("ThumbTip Proxy Transform");
 
-        if (Wrist() && RightIndexFinger() && manager.ToolInReach())
+
+        if (Wrist() && RightIndexFinger() && thumbTipGO
+        && Program.instance.interactionManager.currentPhase == Phase.close)
         {
-            rod.positionCount = 3;
+
+            Vector3 thumbTip = thumbTipGO.transform.position;
+
+            Vector3 uprightVector = (Wrist().transform.position - RightIndexFinger().transform.position);
+
+            Vector3 toolVector = Vector3.Cross(
+                uprightVector,
+                RightIndexFinger().transform.position - thumbTip
+            );
+
+            
+            toolTip = thumbTip + toolVector * 0.2f;
+
+            rod.positionCount = 2;
             //rod.SetPosition(0, wrist.transform.position);
-            rod.SetPosition(0, Wrist().transform.position);
-            rod.SetPosition(1, RightIndexFinger().transform.position);
-            rod.SetPosition(2, (RightIndexFinger().transform.position - Wrist().transform.position));
+            rod.SetPosition(0, toolTip);
+            rod.SetPosition(1, thumbTip - toolVector * 0.2f);
         }
         else
         {
             rod.positionCount = 0;
+            toolTip = Vector3.zero;
         }
 
     }

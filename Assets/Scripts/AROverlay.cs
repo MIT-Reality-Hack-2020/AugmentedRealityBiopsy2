@@ -14,6 +14,7 @@ public class AROverlay : MonoBehaviour
 {
     public OverlayStyle currentStyle;
     public Head head;
+    public Tumor tumor;
     public GameObject orientationSphere;
 
     public void Update()

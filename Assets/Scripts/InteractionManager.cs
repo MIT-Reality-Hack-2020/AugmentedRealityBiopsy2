@@ -49,9 +49,6 @@ public class InteractionManager : MonoBehaviour
         {
             currentPhase = Phase.close;    
         }
-
-
-        patientID.UpdateInterface();
     }
 
 }

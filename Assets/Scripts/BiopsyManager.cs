@@ -17,12 +17,5 @@ public class BiopsyManager : MonoBehaviour
     public SurgicalPointBiopsy biopsyPoint3;
     public SurgicalPointBiopsy biopsyPoint4;
 
-    public bool ToolInReach()
-    {
-        return Vector3.Distance(
-            biopsyTool.RightIndexFinger().transform.position,
-            entryPoint.transform.position) < 0.1f;
-    }
-
 
 }
