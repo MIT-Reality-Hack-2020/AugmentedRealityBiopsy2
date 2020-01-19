@@ -17,7 +17,7 @@ public class BiopsyPathOperation : BiopsyPath
             lineRenderer.positionCount = 3;
             lineRenderer.SetPosition(0, biopsyPoint.transform.position);
             lineRenderer.SetPosition(1, entryPoint.transform.position);
-            lineRenderer.SetPosition(2, biopsyPoint.transform.position + TrajectoryVector()*0.02f);
+            lineRenderer.SetPosition(2, biopsyPoint.transform.position + TrajectoryVector()*0.2f);
 
             if(biopsyManager.biopsyTool.VeryCloseToEntryPoint() && CurrentCorrectness() == Correctness.correct)
             {

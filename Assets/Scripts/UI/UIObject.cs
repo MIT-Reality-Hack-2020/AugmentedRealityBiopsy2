@@ -17,7 +17,6 @@ public class UIObject : MonoBehaviour
 
     public virtual void UpdateInterface()
     {
-        transform.LookAt(2 * transform.position - Camera.main.transform.position);
     }
 
     public void OnEnable()

@@ -24,8 +24,7 @@ public class OperationOverlay : MonoBehaviour
     
     public bool IsVisible()
     {
-        return Program.instance.interactionManager.currentPhase == Phase.close 
-        && Program.instance.planningOverlay.planned
+        return Program.instance.planningOverlay.planned
         && Program.instance.patientID.approved;
     }
 
