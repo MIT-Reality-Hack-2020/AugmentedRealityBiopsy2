@@ -10,7 +10,6 @@ public class FinalOverlay : UIObject
         return Program.instance.biopsyManager.currentPhase == BiopsyPhase.analyzing;
     }
 
-
     public override void UpdateInterface()
     {
         if (IsVisible())

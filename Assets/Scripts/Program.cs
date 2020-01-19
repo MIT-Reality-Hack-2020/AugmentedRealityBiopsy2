@@ -14,6 +14,7 @@ public class Program : MonoBehaviour
 
     public TransferFunctionUI transferFunctionUI;
 
+    public StartOverlay startOverlay;
     public PatientID patientID;
     public BiopsyUI biopsyUI;
     public PlanningOverlay planningOverlay;
@@ -30,6 +31,7 @@ public class Program : MonoBehaviour
 
     public void Update()
     {
+        startOverlay.UpdateInterface();
         operationOverlay.UpdateInterface();
         patientID.UpdateInterface();
         biopsyUI.UpdateInterface();

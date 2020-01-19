@@ -2,28 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PatientID : UIObject
+public class PlanningOverlay : UIObject
 {
-    public bool approved;
+    public bool planned;
 
-    public void Approve()
+
+    public void Plan()
     {
-        approved = true;
+        planned = true;
     }
-
-    public void Dismiss()
-    {
-
-    }
-
+    
     public bool IsVisible()
     {
-        return Program.instance.startOverlay.launched && !approved;
+        return Program.instance.startOverlay.launched
+        && Program.instance.patientID.approved
+        && !Program.instance.planningOverlay.planned;
     }
 
     public override void UpdateInterface()
     {
-        if (IsVisible())
+        if(IsVisible()) 
         {
             base.UpdateInterface();
             enabled = true;

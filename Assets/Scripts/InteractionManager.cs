@@ -36,6 +36,7 @@ public class InteractionManager : MonoBehaviour
     {
         if(DistanceFromCamera() > 1.8f)
         {
+            Program.instance.startOverlay.launched = false;
             Program.instance.patientID.approved = false;
             Program.instance.planningOverlay.planned = false;  
             Program.instance.biopsyManager.procedureOver = false;

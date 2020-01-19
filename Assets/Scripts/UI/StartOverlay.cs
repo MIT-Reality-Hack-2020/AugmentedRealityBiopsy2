@@ -2,25 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlanningOverlay : UIObject
+public class StartOverlay : UIObject
 {
-    public bool planned;
+    public bool launched;
+  
+    public AudioClip soundWelcome;
 
-
-    public void Plan()
+    public void Launch()
     {
-        planned = true;
+        launched = true;
     }
-    
+
     public bool IsVisible()
     {
-        return !Program.instance.planningOverlay.planned
-        && Program.instance.patientID.approved;
+        return !launched;
     }
 
     public override void UpdateInterface()
     {
-        if(IsVisible()) 
+        if (IsVisible())
         {
             base.UpdateInterface();
             enabled = true;
@@ -30,5 +30,4 @@ public class PlanningOverlay : UIObject
             enabled = false;
         }
     }
-
 }

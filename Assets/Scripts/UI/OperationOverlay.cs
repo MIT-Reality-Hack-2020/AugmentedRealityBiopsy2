@@ -24,8 +24,9 @@ public class OperationOverlay : UIObject
 
     public bool IsVisible()
     {
-        return Program.instance.planningOverlay.planned
+        return  Program.instance.startOverlay.launched
         && Program.instance.patientID.approved
+        && Program.instance.planningOverlay.planned
         && Program.instance.biopsyManager.currentPhase != BiopsyPhase.analyzing;
     }
 
