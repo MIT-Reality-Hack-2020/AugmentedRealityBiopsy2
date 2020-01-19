@@ -4,5 +4,13 @@ using UnityEngine;
 
 public class HeadPlanning : Head
 {
-    public bool approved;
+    public PlanningOverlay planningOverlay;
+
+
+    public override bool IsVisible()
+    {
+        return planningOverlay.IsVisible();
+    }
+
+
 }

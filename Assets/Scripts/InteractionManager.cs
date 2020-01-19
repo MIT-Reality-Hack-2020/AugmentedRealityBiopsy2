@@ -32,11 +32,11 @@ public class InteractionManager : MonoBehaviour
         );
     }
 
-    public void Update()
+    public void Update() // stays here
     {
         if(DistanceFromCamera() > 1.8f && patientID)
         {
-            UI.instance.patientID.approved = false;
+            Program.instance.patientID.approved = false;
         }
         else if(DistanceFromCamera() > 1.1f )
         {

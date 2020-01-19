@@ -32,7 +32,7 @@ public class TransferFunction
             dataValue, alphaValue
         );
         alphaControlPoints.Add(newControlPoint);
-        UI.instance.transferFunctionUI.histogramUI.CreateAlphaSlider(newControlPoint);
+        Program.instance.transferFunctionUI.histogramUI.CreateAlphaSlider(newControlPoint);
     }
 
     public ControlPointAlpha CreateControlPointAlpha(float dataValue, float alphaValue)

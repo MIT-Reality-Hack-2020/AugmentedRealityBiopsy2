@@ -4,15 +4,14 @@ using UnityEngine;
 
 public abstract class Head : MonoBehaviour
 {
-    public OperationOverlay overlay;
     public Material materialSkin;
     public Material materialInside;
 
+    public Tumor tumor;
 
-    // Update is called once per frame
-    void Update()
+    public virtual bool IsVisible()
     {
-
-
+        return false;
     }
+    
 }

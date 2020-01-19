@@ -41,11 +41,10 @@ public class BiopsyTool : MonoBehaviour
     public float DistanceFromTumor()
     {
         return Vector3.Distance(
-            Program.instance.operationOverlay.tumor.transform.position,
+            Program.instance.operationOverlay.head.tumor.transform.position,
             toolTip
         );
     }
-
 
     public bool CloseToEntryPoint()
     {
@@ -93,7 +92,7 @@ public class BiopsyTool : MonoBehaviour
                 //     ThumbKnuckle().transform.position, 
                 //     0.5f
                 // )
-            );
+            ).normalized;
         }
         else
         {
@@ -122,7 +121,7 @@ public class BiopsyTool : MonoBehaviour
             rod.SetPosition(1, endOfTool);
 
             float remainingDistance = Vector3.Distance(
-                Program.instance.operationOverlay.tumor.transform.position,
+                Program.instance.operationOverlay.head.tumor.transform.position,
                 toolTip
             );
 

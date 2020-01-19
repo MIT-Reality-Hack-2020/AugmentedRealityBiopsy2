@@ -2,17 +2,33 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlanningOverlay : MonoBehaviour
+public class PlanningOverlay : UIObject
 {
-    // Start is called before the first frame update
-    void Start()
+    public bool planned;
+
+
+    public void Plan()
     {
-        
+        planned = true;
+    }
+    
+    public bool IsVisible()
+    {
+        return !Program.instance.planningOverlay.planned
+        && Program.instance.patientID.approved;
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void UpdateInterface()
     {
-        
+        if(IsVisible()) 
+        {
+            base.UpdateInterface();
+            enabled = true;
+        }
+        else
+        {
+            enabled = false;
+        }
     }
+
 }

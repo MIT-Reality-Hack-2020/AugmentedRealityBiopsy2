@@ -13,9 +13,7 @@ public enum OperationOverlayStyle
 public class OperationOverlay : MonoBehaviour
 {
     public OperationOverlayStyle currentStyle;
-    public Head head;
-    public Tumor tumor;
-
+    public HeadOperation head;
     public float alpha;
 
     public void SetAlpha(float newAlpha)
@@ -23,6 +21,14 @@ public class OperationOverlay : MonoBehaviour
         alpha = newAlpha;
         head.materialInside.color = new Color(0.7f, 0.7f, 0.7f, alpha);
     }
+    
+    public bool IsVisible()
+    {
+        return Program.instance.interactionManager.currentPhase == Phase.close 
+        && Program.instance.planningOverlay.planned
+        && Program.instance.patientID.approved;
+    }
+
 
     public void Update()
     {
@@ -35,7 +41,6 @@ public class OperationOverlay : MonoBehaviour
         {
             currentStyle = OperationOverlayStyle.skinned;
         }
-
     }
 
 }

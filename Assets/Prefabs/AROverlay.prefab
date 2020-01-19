@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentStyle: 0
-  head: {fileID: 0}
+  head: {fileID: 5130244787199827700}
   tumor: {fileID: 4765747031337813735}
   alpha: 0
 --- !u!1001 &503703993508482757
@@ -366,6 +366,11 @@ PrefabInstance:
       propertyPath: overlay
       value: 
       objectReference: {fileID: 1075076804449412299}
+    - target: {fileID: 5891951415640683958, guid: 72709c2e4b6c95945902044bfdcf911b,
+        type: 3}
+      propertyPath: operationOverlay
+      value: 
+      objectReference: {fileID: 1075076804449412299}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72709c2e4b6c95945902044bfdcf911b, type: 3}
 --- !u!4 &6306078595422785024 stripped
@@ -374,6 +379,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1654546109424937794}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5130244787199827700 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5891951415640683958, guid: 72709c2e4b6c95945902044bfdcf911b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1654546109424937794}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f251f1016010f54aa18604c73ce1850, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &4765747031337813735 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6112921018379300261, guid: 72709c2e4b6c95945902044bfdcf911b,

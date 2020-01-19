@@ -4,30 +4,40 @@ using UnityEngine;
 
 public class HeadOperation : Head
 {
+    public OperationOverlay operationOverlay;
+
+    public override bool IsVisible()
+    {
+        return operationOverlay.IsVisible();
+    }
 
     void Update()
     {
-        if (Program.instance.interactionManager.currentPhase == Phase.far)
+        if(IsVisible())
         {
-            GetComponent<MeshRenderer>().enabled = false;
-        }
-        else
-        {
-            if (overlay.currentStyle == OperationOverlayStyle.skinned)
+            if (operationOverlay.currentStyle == OperationOverlayStyle.skinned)
             {
                 GetComponent<MeshRenderer>().enabled = true;
                 GetComponent<MeshRenderer>().material = materialSkin;
 
             }
-            else if (overlay.currentStyle == OperationOverlayStyle.mri)
+            else if (operationOverlay.currentStyle == OperationOverlayStyle.mri)
             {
                 GetComponent<MeshRenderer>().enabled = false;
             }
-            else if (overlay.currentStyle == OperationOverlayStyle.mesh)
+            else if (operationOverlay.currentStyle == OperationOverlayStyle.mesh)
             {
                 GetComponent<MeshRenderer>().enabled = true;
                 GetComponent<MeshRenderer>().material = materialInside;
             }
+
+            tumor.GetComponent<MeshRenderer>().enabled = true;
+        }
+        else
+        {
+            GetComponent<MeshRenderer>().enabled = false;
+            
+            tumor.GetComponent<MeshRenderer>().enabled = false;
         }
     }
 }

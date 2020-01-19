@@ -38,7 +38,9 @@ public class BiopsyUI : UIObject
             valueLabel.text = Math.Round(
                 manager.biopsyTool.DistanceFromTumor(),
                 2
-            ).ToString() + " cm";
+            ).ToString() + " cm" 
+            + System.Environment.NewLine 
+            + manager.biopsyPath.BiopsyAngle();
         }
         else
         {
