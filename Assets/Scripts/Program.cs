@@ -30,6 +30,7 @@ public class Program : MonoBehaviour
 
     public void Update()
     {
+        operationOverlay.UpdateInterface();
         patientID.UpdateInterface();
         biopsyUI.UpdateInterface();
         planningOverlay.UpdateInterface();

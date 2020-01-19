@@ -10,7 +10,7 @@ public enum OperationOverlayStyle
     mri
 }
 
-public class OperationOverlay : MonoBehaviour
+public class OperationOverlay : UIObject
 {
     public OperationOverlayStyle currentStyle;
     public HeadOperation head;
@@ -21,25 +21,35 @@ public class OperationOverlay : MonoBehaviour
         alpha = newAlpha;
         head.materialInside.color = new Color(0.7f, 0.7f, 0.7f, alpha);
     }
-    
+
     public bool IsVisible()
     {
         return Program.instance.planningOverlay.planned
-        && Program.instance.patientID.approved;
+        && Program.instance.patientID.approved
+        && Program.instance.biopsyManager.currentPhase != BiopsyPhase.analyzing;
     }
 
 
-    public void Update()
+    public override void UpdateInterface()
     {
-        
-        if(Program.instance.biopsyManager.biopsyTool.CloseToEntryPoint())
+        if (IsVisible())
         {
-            currentStyle = OperationOverlayStyle.mesh;
+            base.UpdateInterface();
+            enabled = true;
+            if (Program.instance.biopsyManager.biopsyTool.CloseToEntryPoint())
+            {
+                currentStyle = OperationOverlayStyle.mesh;
+            }
+            else
+            {
+                currentStyle = OperationOverlayStyle.skinned;
+            }
         }
         else
         {
-            currentStyle = OperationOverlayStyle.skinned;
+            enabled = false;
         }
+
     }
 
 }

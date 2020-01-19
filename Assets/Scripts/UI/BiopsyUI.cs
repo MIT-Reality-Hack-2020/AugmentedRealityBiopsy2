@@ -6,7 +6,6 @@ using System;
 
 public class BiopsyUI : UIObject
 {
-    public OperationOverlay operationOverlay;
     public BiopsyManager manager;
     public TextMeshPro description;
     public TextMeshPro valueLabel;
@@ -25,7 +24,8 @@ public class BiopsyUI : UIObject
             
             base.UpdateInterface();
         }
-        else if(operationOverlay.IsVisible() && manager.biopsyPath.CurrentCorrectness() != Correctness.correct)
+        else if(Program.instance.operationOverlay.IsVisible() 
+        && manager.biopsyPath.CurrentCorrectness() != Correctness.correct)
         {
             enabled = true;
             description.enabled = false;
@@ -33,7 +33,8 @@ public class BiopsyUI : UIObject
             
             base.UpdateInterface();
         }
-        else if (operationOverlay.IsVisible() && manager.biopsyPath.CurrentCorrectness() == Correctness.correct)
+        else if (Program.instance.operationOverlay.IsVisible() 
+        && manager.biopsyPath.CurrentCorrectness() == Correctness.correct)
         {
             enabled = true;
             description.enabled = true;

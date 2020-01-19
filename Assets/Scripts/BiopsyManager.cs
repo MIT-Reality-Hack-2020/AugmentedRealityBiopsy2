@@ -57,6 +57,7 @@ public class BiopsyManager : MonoBehaviour
     public void AnalyzeBiopsy()
     {
         currentPhase = BiopsyPhase.analyzing;
+        audioSource.PlayOneShot(soundBiopsyCollected);
         audioSource.PlayOneShot(soundTestimonial);
     }
 }
