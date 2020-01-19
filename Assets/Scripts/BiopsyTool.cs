@@ -60,6 +60,36 @@ public class BiopsyTool : MonoBehaviour
         }
     }
 
+       public bool VeryCloseToEntryPoint()
+    {
+        if (RightIndexFinger()
+        && Vector3.Distance(
+            manager.entryPoint.transform.position,
+            toolTip
+        ) < 0.05f
+        )
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    public Vector3 ToolVector()
+    {
+        GameObject indexFingerKnuckle = GameObject.Find("IndexKnuckle Proxy Transform");
+
+        if (RightIndexFinger() && indexFingerKnuckle)
+        {
+            return ToolVector(RightIndexFinger(), indexFingerKnuckle);
+        }
+        else
+        {
+            return Vector3.zero;
+        }
+    }
     public Vector3 ToolVector(GameObject frontObject, GameObject backObject)
     {
         return (frontObject.transform.position - backObject.transform.position).normalized;

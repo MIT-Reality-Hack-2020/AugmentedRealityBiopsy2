@@ -15,7 +15,14 @@ public class AROverlay : MonoBehaviour
     public OverlayStyle currentStyle;
     public Head head;
     public Tumor tumor;
-    public GameObject orientationSphere;
+
+    public float alpha;
+
+    public void SetAlpha(float newAlpha)
+    {
+        alpha = newAlpha;
+        head.materialInside.color = new Color(0.7f, 0.7f, 0.7f, alpha);
+    }
 
     public void Update()
     {

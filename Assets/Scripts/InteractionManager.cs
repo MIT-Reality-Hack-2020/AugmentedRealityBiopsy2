@@ -44,6 +44,14 @@ public class InteractionManager : MonoBehaviour
         {
             currentPhase = Phase.close;
         }
+
+        if(Input.GetKeyDown(KeyCode.R))
+            Reset();
+    }
+
+    public void Reset()
+    {
+        UI.instance.patientID.approved = false;
     }
 
 }
