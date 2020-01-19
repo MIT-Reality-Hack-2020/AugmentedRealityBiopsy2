@@ -7,5 +7,4 @@ public class ControlPointAlpha : ScriptableObject
     public float dataValue;
     public float alphaValue;
 
-    public HistogramAlphaSlider alphaSlider;
 }

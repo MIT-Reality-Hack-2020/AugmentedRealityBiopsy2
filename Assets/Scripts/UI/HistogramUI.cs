@@ -11,11 +11,11 @@ public class HistogramUI : MonoBehaviour
 
     public void CreateAlphaSlider(ControlPointAlpha controlPointAlpha)
     {
-        GameObject sliderGo = GameObject.Instantiate(alphaSliderPrefab) as GameObject;
-        sliderGo.transform.SetParent(transform);
+        // GameObject sliderGo = GameObject.Instantiate(alphaSliderPrefab) as GameObject;
+        // sliderGo.transform.SetParent(transform);
         
-        HistogramAlphaSlider newSlider = sliderGo.GetComponent<HistogramAlphaSlider>();
+        // HistogramAlphaSlider newSlider = sliderGo.GetComponent<HistogramAlphaSlider>();
         
-        newSlider.controlPointAlpha = controlPointAlpha;
+        // newSlider.controlPointAlpha = controlPointAlpha;
     }
 }
