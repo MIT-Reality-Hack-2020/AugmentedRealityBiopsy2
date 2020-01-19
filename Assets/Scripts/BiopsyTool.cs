@@ -63,7 +63,7 @@ public class BiopsyTool : MonoBehaviour
         }
     }
 
-       public bool VeryCloseToEntryPoint()
+    public bool VeryCloseToEntryPoint()
     {
         if (RightIndexFinger()
         && Vector3.Distance(

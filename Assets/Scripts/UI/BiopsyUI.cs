@@ -13,11 +13,15 @@ public class BiopsyUI : UIObject
 
     public override void UpdateInterface()
     {
-        if(manager.biopsyCollected)
+        if(manager.currentPhase == BiopsyPhase.analyzing)
+        {
+            enabled = false;
+        }
+        else if(manager.currentPhase == BiopsyPhase.retracting)
         {
             enabled = true;
             description.enabled = false;
-            valueLabel.text = "Biopsy Collected";
+            valueLabel.text = "Biopsy Collected." + System.Environment.NewLine + "Withdraw the needle.";
             
             base.UpdateInterface();
         }

@@ -20,6 +20,7 @@ public class Program : MonoBehaviour
     
     public VolumeRenderedObject volumeRenderedObject;
     public OperationOverlay operationOverlay;
+    public FinalOverlay finalOverlay;
 
 
     public void Awake()
@@ -32,6 +33,7 @@ public class Program : MonoBehaviour
         patientID.UpdateInterface();
         biopsyUI.UpdateInterface();
         planningOverlay.UpdateInterface();
+        finalOverlay.UpdateInterface();
         // if(alphaSlider)
         //     alphaSlider.UpdateInterface();
     }

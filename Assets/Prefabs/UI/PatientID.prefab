@@ -444,7 +444,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4412393747424296919}
-  - component: {fileID: 4920660834369312269}
   m_Layer: 0
   m_Name: LeftSide
   m_TagString: Untagged
@@ -471,18 +470,6 @@ Transform:
   m_Father: {fileID: 2575018989550280421}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4920660834369312269
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2345133252503372229}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa67a91e768538d459e81069d042fac9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2575018988950221125
 GameObject:
   m_ObjectHideFlags: 0
@@ -930,6 +917,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2575018989550280421}
   - component: {fileID: 2292905295701606207}
+  - component: {fileID: 8245566444328746999}
   m_Layer: 0
   m_Name: PatientID
   m_TagString: Untagged
@@ -966,6 +954,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   approved: 0
+--- !u!114 &8245566444328746999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2575018989550280420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa67a91e768538d459e81069d042fac9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2575018989564832789
 GameObject:
   m_ObjectHideFlags: 0
@@ -2579,7 +2579,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7800106193072421692}
-  - component: {fileID: 2521873175216078881}
   m_Layer: 0
   m_Name: RightSide
   m_TagString: Untagged
@@ -2604,18 +2603,6 @@ Transform:
   m_Father: {fileID: 2575018989550280421}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2521873175216078881
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8358566311285147846}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa67a91e768538d459e81069d042fac9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &5547483751669859152
 PrefabInstance:
   m_ObjectHideFlags: 0

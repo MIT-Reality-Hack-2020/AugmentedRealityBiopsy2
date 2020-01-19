@@ -34,9 +34,12 @@ public class InteractionManager : MonoBehaviour
 
     public void Update() // stays here
     {
-        if(DistanceFromCamera() > 1.8f && patientID)
+        if(DistanceFromCamera() > 1.8f)
         {
             Program.instance.patientID.approved = false;
+            Program.instance.planningOverlay.planned = false;  
+            Program.instance.biopsyManager.procedureOver = false;
+            Program.instance.biopsyManager.currentPhase = BiopsyPhase.collecting;
         }
         else if(DistanceFromCamera() > 1.1f )
         {

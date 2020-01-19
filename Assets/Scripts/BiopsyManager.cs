@@ -4,8 +4,16 @@ using UnityEngine;
 using System.Linq;
 
 
+public enum BiopsyPhase
+{
+    collecting,
+    retracting,
+    analyzing
+}
+
 public class BiopsyManager : MonoBehaviour
 {
+    public BiopsyPhase currentPhase;
     public BiopsyTool biopsyTool;
 
     public BiopsyPath biopsyPath;
@@ -13,32 +21,42 @@ public class BiopsyManager : MonoBehaviour
     public GameObject biopsyPoint;
     public SurgicalPointEntry entryPoint;
 
-    public bool biopsyCollected;
+    public bool procedureOver;
 
     public AudioSource audioSource;
 
+    public AudioClip soundBiopsyCollected;
+    public AudioClip soundTestimonial;
+
     public void Update()
     {
-        if (!biopsyCollected && Vector3.Distance(
+        if (currentPhase == BiopsyPhase.collecting
+        && Vector3.Distance(
                 biopsyPoint.transform.position,
                 biopsyTool.toolTip
             ) < 0.02f)
         {
-            PerformBiopsy();
+           CollectBiopsy();
         }
-        else if (biopsyCollected && Vector3.Distance(
+        else if(currentPhase == BiopsyPhase.retracting
+            && Vector3.Distance(
             biopsyPoint.transform.position,
             biopsyTool.toolTip
-            ) > 1.1f
-        )
+        ) > 0.12f)
         {
-            biopsyCollected = false;
+           AnalyzeBiopsy();
         }
 
     }
-    public void PerformBiopsy()
+    public void CollectBiopsy()
     {
-        biopsyCollected = true;
-        audioSource.Play();
+        currentPhase = BiopsyPhase.retracting;
+        audioSource.PlayOneShot(soundBiopsyCollected);
+    }
+
+    public void AnalyzeBiopsy()
+    {
+        currentPhase = BiopsyPhase.analyzing;
+        audioSource.PlayOneShot(soundTestimonial);
     }
 }
