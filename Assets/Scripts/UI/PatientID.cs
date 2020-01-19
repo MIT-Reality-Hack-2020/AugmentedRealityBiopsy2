@@ -7,27 +7,23 @@ public class PatientID : UIObject
     public InteractionManager manager;
     public AROverlay overlay;
 
-    public bool outOfTheWay;
+    public bool approved;
+
+    public void Approve()
+    {
+        approved = true;
+    }
+
+    public void Dismiss()
+    {
+
+    }
 
     public override void UpdateInterface()
     {
-        // if (manager.currentPhase == Phase.far)
-        // {
-        //     enabled = false;
-        // }
-        // else if (manager.currentPhase == Phase.identification)
-        // {
-        //     base.UpdateInterface();
-
-        //     enabled = true;
-        //     outOfTheWay = false;
-        // }
-        // else 
-        if (Program.instance.biopsyManager.biopsyTool.CloseToEntryPoint())
+        if (approved)
         {
-            base.UpdateInterface();
             enabled = false;
-            //outOfTheWay = true;
         }
         else
         {
