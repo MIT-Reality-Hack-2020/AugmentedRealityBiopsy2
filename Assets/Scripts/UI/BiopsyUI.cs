@@ -21,7 +21,7 @@ public class BiopsyUI : UIObject
             
             base.UpdateInterface();
         }
-        else if(manager.biopsyTool.VeryCloseToEntryPoint() && !manager.biopsyPath.CorrectAngle())
+        else if(manager.biopsyTool.VeryCloseToEntryPoint() && manager.biopsyPath.CurrentCorrectness() != Correctness.correct)
         {
             enabled = true;
             description.enabled = false;
@@ -29,7 +29,7 @@ public class BiopsyUI : UIObject
             
             base.UpdateInterface();
         }
-        else if (manager.biopsyTool.CloseToEntryPoint() && !manager.biopsyCollected)
+        else if (manager.biopsyTool.VeryCloseToEntryPoint() && manager.biopsyPath.CurrentCorrectness() == Correctness.correct)
         {
             enabled = true;
             description.enabled = true;

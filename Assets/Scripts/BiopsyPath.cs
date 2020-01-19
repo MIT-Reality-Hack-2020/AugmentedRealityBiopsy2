@@ -2,6 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum Correctness
+{
+    off,
+    intermediate,
+    correct
+}
+
 public class BiopsyPath : MonoBehaviour
 {
     public BiopsyManager biopsyManager;
@@ -11,7 +18,38 @@ public class BiopsyPath : MonoBehaviour
 
     public Material materialNormal;
     public Material materialCorrect;
+    public Material materialIntermediate;
     public Material materialFalse;
+
+    public Correctness CurrentCorrectness()
+    {
+        if(Vector3.Angle(
+            biopsyManager.biopsyTool.ToolVector(),
+            TrajectoryVector()
+        ) < 5f 
+        && Vector3.Angle(
+            biopsyManager.biopsyTool.ToolVector(),
+            TrajectoryVector()
+        ) > 175f)
+        {
+            return Correctness.correct;
+        }
+        else if(Vector3.Angle(
+            biopsyManager.biopsyTool.ToolVector(),
+            TrajectoryVector()
+        ) < 10f 
+        && Vector3.Angle(
+            biopsyManager.biopsyTool.ToolVector(),
+            TrajectoryVector()
+        ) > 170f)
+        {
+            return Correctness.intermediate;
+        }
+        else
+        {
+            return Correctness.off;
+        }
+    }
 
     public bool CorrectAngle()
     {
@@ -40,15 +78,19 @@ public class BiopsyPath : MonoBehaviour
             lineRenderer.SetPosition(1, entryPoint.transform.position);
             lineRenderer.SetPosition(2, biopsyManager.biopsyPoint.transform.position + TrajectoryVector()*0.2f);
 
-            if(biopsyManager.biopsyTool.VeryCloseToEntryPoint() && CorrectAngle())
+            if(biopsyManager.biopsyTool.VeryCloseToEntryPoint() && CurrentCorrectness() == Correctness.correct)
             {
                 lineRenderer.material = materialCorrect;
             }
-            else if(biopsyManager.biopsyTool.VeryCloseToEntryPoint() && !CorrectAngle())
+            else if(biopsyManager.biopsyTool.VeryCloseToEntryPoint() && CurrentCorrectness() == Correctness.intermediate)
+            {
+                lineRenderer.material = materialIntermediate;
+            }
+            else if(biopsyManager.biopsyTool.VeryCloseToEntryPoint() && CurrentCorrectness() == Correctness.off)
             {
                 lineRenderer.material = materialFalse;
             }
-            else
+            else 
             {
                 lineRenderer.material = materialNormal;
             }

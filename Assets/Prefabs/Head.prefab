@@ -372,6 +372,8 @@ MonoBehaviour:
   entryPoint: {fileID: 4142079208602139997}
   materialNormal: {fileID: 0}
   materialCorrect: {fileID: 0}
+  materialIntermediate: {fileID: 2100000, guid: a57678fe04d2b854b8ed4af52fc8886d,
+    type: 2}
   materialFalse: {fileID: 0}
 --- !u!120 &6290667839394567897
 LineRenderer:
