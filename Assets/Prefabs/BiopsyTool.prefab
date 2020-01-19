@@ -320,11 +320,8 @@ MonoBehaviour:
   manager: {fileID: 0}
   rod: {fileID: 7659758435290756436}
   coloredTip: {fileID: 1366981961995066965}
-  fakeFingerFront: {fileID: 0}
-  fakeFingerBack: {fileID: 0}
   toolTip: {x: 0, y: 0, z: 0}
-  biopsyRunning: 0
-  lengthOfTool: 0.15
+  lengthOfTool: 0.1
 --- !u!1 &5593874302484684777
 GameObject:
   m_ObjectHideFlags: 0

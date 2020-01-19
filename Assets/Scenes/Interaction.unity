@@ -1269,6 +1269,11 @@ PrefabInstance:
       propertyPath: ButtonReleased.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 8300000, guid: 54abcd247aeb37d48b036ccac3fd7e22, type: 3}
+    - target: {fileID: 2878793929834200926, guid: 268600ebaa81f6e42b0b0ed1f09d8611,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.27199996
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 268600ebaa81f6e42b0b0ed1f09d8611, type: 3}
 --- !u!114 &344959638 stripped
@@ -3053,7 +3058,7 @@ PrefabInstance:
     - target: {fileID: 3510608146253273471, guid: 71b21368b6fc1de4c8d8e26dea885f52,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.549
+      value: 0.528
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71b21368b6fc1de4c8d8e26dea885f52, type: 3}
@@ -3141,7 +3146,7 @@ PrefabInstance:
     - target: {fileID: 5366651283352243330, guid: c35b1d9883ef7674996a29fa49bc325f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.30200002
+      value: 0.26699996
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c35b1d9883ef7674996a29fa49bc325f, type: 3}
@@ -3747,7 +3752,7 @@ PrefabInstance:
     - target: {fileID: 1869843315859019625, guid: 73a890400a32bfb44b34d5df96914268,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.28
+      value: 0.24499996
       objectReference: {fileID: 0}
     - target: {fileID: 3861694472324628430, guid: 73a890400a32bfb44b34d5df96914268,
         type: 3}
