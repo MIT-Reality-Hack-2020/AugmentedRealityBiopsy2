@@ -5,12 +5,13 @@ using UnityEngine;
 public class StartOverlay : UIObject
 {
     public bool launched;
-  
-    public AudioClip soundWelcome;
+
+    public AudioSource audioSource;
 
     public void Launch()
     {
         launched = true;
+        audioSource.Play();
     }
 
     public bool IsVisible()

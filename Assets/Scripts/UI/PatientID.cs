@@ -6,9 +6,11 @@ public class PatientID : UIObject
 {
     public bool approved;
 
+    public AudioSource audioSource;
     public void Approve()
     {
         approved = true;
+        audioSource.Play();
     }
 
     public void Dismiss()

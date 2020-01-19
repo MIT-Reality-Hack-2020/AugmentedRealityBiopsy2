@@ -24,17 +24,7 @@ public class BiopsyUI : UIObject
             
             base.UpdateInterface();
         }
-        else if(Program.instance.operationOverlay.IsVisible() 
-        && manager.biopsyPath.CurrentCorrectness() != Correctness.correct)
-        {
-            enabled = true;
-            description.enabled = false;
-            valueLabel.text = "Adjust Instrument";
-            
-            base.UpdateInterface();
-        }
-        else if (Program.instance.operationOverlay.IsVisible() 
-        && manager.biopsyPath.CurrentCorrectness() == Correctness.correct)
+        else if (Program.instance.operationOverlay.IsVisible())
         {
             enabled = true;
             description.enabled = true;
@@ -48,6 +38,31 @@ public class BiopsyUI : UIObject
             + System.Environment.NewLine 
             + manager.biopsyPath.BiopsyAngle();
         }
+
+        // else if(Program.instance.operationOverlay.IsVisible() 
+        // && manager.biopsyPath.CurrentCorrectness() != Correctness.correct)
+        // {
+        //     enabled = true;
+        //     description.enabled = false;
+        //     valueLabel.text = "Adjust Instrument";
+            
+        //     base.UpdateInterface();
+        // }
+        // else if (Program.instance.operationOverlay.IsVisible() 
+        // && manager.biopsyPath.CurrentCorrectness() == Correctness.correct)
+        // {
+        //     enabled = true;
+        //     description.enabled = true;
+            
+        //     base.UpdateInterface();
+
+        //     valueLabel.text = Math.Round(
+        //         manager.biopsyTool.DistanceFromTumor(),
+        //         2
+        //     ).ToString() + " cm" 
+        //     + System.Environment.NewLine 
+        //     + manager.biopsyPath.BiopsyAngle();
+        // }
         else
         {
             enabled = false;

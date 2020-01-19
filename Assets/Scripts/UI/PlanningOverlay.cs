@@ -6,10 +6,12 @@ public class PlanningOverlay : UIObject
 {
     public bool planned;
 
+    public AudioSource audioSource;
 
     public void Plan()
     {
         planned = true;
+        audioSource.Play();
     }
     
     public bool IsVisible()
