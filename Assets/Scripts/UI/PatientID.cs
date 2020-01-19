@@ -5,7 +5,6 @@ using UnityEngine;
 public class PatientID : UIObject
 {
     public InteractionManager manager;
-    public AROverlay overlay;
 
     public bool approved;
 

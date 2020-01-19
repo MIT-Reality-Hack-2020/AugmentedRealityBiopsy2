@@ -41,7 +41,7 @@ public class BiopsyTool : MonoBehaviour
     public float DistanceFromTumor()
     {
         return Vector3.Distance(
-            Program.instance.aROverlay.tumor.transform.position,
+            Program.instance.operationOverlay.tumor.transform.position,
             toolTip
         );
     }
@@ -122,7 +122,7 @@ public class BiopsyTool : MonoBehaviour
             rod.SetPosition(1, endOfTool);
 
             float remainingDistance = Vector3.Distance(
-                Program.instance.aROverlay.tumor.transform.position,
+                Program.instance.operationOverlay.tumor.transform.position,
                 toolTip
             );
 

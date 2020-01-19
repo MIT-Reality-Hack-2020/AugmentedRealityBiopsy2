@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum OverlayStyle
+public enum OperationOverlayStyle
 {
     skinned,
     compound,
@@ -10,9 +10,9 @@ public enum OverlayStyle
     mri
 }
 
-public class AROverlay : MonoBehaviour
+public class OperationOverlay : MonoBehaviour
 {
-    public OverlayStyle currentStyle;
+    public OperationOverlayStyle currentStyle;
     public Head head;
     public Tumor tumor;
 
@@ -29,11 +29,11 @@ public class AROverlay : MonoBehaviour
         
         if(Program.instance.biopsyManager.biopsyTool.CloseToEntryPoint())
         {
-            currentStyle = OverlayStyle.mesh;
+            currentStyle = OperationOverlayStyle.mesh;
         }
         else
         {
-            currentStyle = OverlayStyle.skinned;
+            currentStyle = OperationOverlayStyle.skinned;
         }
 
     }

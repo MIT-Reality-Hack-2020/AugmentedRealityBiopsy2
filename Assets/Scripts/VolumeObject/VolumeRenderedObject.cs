@@ -17,8 +17,8 @@ public class VolumeRenderedObject : MonoBehaviour
     void Update()
     {
         
-        if(Program.instance.interactionManager.overlay.currentStyle == OverlayStyle.mri
-        || Program.instance.interactionManager.overlay.currentStyle == OverlayStyle.compound)
+        if(Program.instance.operationOverlay.currentStyle == OperationOverlayStyle.mri
+        || Program.instance.operationOverlay.currentStyle == OperationOverlayStyle.compound)
         {
             GetComponent<MeshRenderer>().enabled = true;
         }

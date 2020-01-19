@@ -13,9 +13,7 @@ public enum Phase
 public class InteractionManager : MonoBehaviour
 {
     public Phase currentPhase;
-
     public Camera mainCamera;
-    public AROverlay overlay;
     public PatientID patientID;
 
     public float DistanceFromCamera(Vector3 checkPosition)
@@ -30,7 +28,7 @@ public class InteractionManager : MonoBehaviour
     {
         return Vector3.Distance(
             mainCamera.transform.position,
-            overlay.transform.position
+            Program.instance.operationOverlay.transform.position
         );
     }
 
@@ -38,7 +36,7 @@ public class InteractionManager : MonoBehaviour
     {
         if(DistanceFromCamera() > 1.8f && patientID)
         {
-            overlay.approved = false;
+            UI.instance.patientID.approved = false;
         }
         else if(DistanceFromCamera() > 1.1f )
         {

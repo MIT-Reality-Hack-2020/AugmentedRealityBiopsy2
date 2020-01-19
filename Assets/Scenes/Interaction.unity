@@ -746,7 +746,6 @@ MonoBehaviour:
   transferFunctionUI: {fileID: 1881603621}
   patientID: {fileID: 344959638}
   biopsyUI: {fileID: 2081466204}
-  alphaSlider: {fileID: 0}
 --- !u!4 &155628318
 Transform:
   m_ObjectHideFlags: 0
@@ -1866,11 +1865,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 871187421230813221, guid: 71b21368b6fc1de4c8d8e26dea885f52,
+    - target: {fileID: 6115664286275206817, guid: 71b21368b6fc1de4c8d8e26dea885f52,
         type: 3}
-      propertyPath: m_Name
-      value: BiopsyPoint
-      objectReference: {fileID: 0}
+      propertyPath: overlay
+      value: 
+      objectReference: {fileID: 469928784627551536}
+    - target: {fileID: 6115664286275206817, guid: 71b21368b6fc1de4c8d8e26dea885f52,
+        type: 3}
+      propertyPath: materialSkin
+      value: 
+      objectReference: {fileID: 2100000, guid: 5b886771bb5bdd841b9d6c052ca11709, type: 2}
+    - target: {fileID: 6115664286275206817, guid: 71b21368b6fc1de4c8d8e26dea885f52,
+        type: 3}
+      propertyPath: materialInside
+      value: 
+      objectReference: {fileID: 2100000, guid: 5d241aae6a682fc47a04227a6b1aa92a, type: 2}
     - target: {fileID: 1802434773845403594, guid: 71b21368b6fc1de4c8d8e26dea885f52,
         type: 3}
       propertyPath: m_Name
@@ -1880,6 +1889,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 871187421230813221, guid: 71b21368b6fc1de4c8d8e26dea885f52,
+        type: 3}
+      propertyPath: m_Name
+      value: BiopsyPoint
       objectReference: {fileID: 0}
     - target: {fileID: 1099985054379982793, guid: 71b21368b6fc1de4c8d8e26dea885f52,
         type: 3}
@@ -2961,6 +2975,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_textInfo.pageCount
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 968896985731731341, guid: 71b21368b6fc1de4c8d8e26dea885f52,
+        type: 3}
+      propertyPath: m_Name
+      value: HeadOperation
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71b21368b6fc1de4c8d8e26dea885f52, type: 3}

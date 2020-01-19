@@ -10,7 +10,6 @@ public class BiopsyUI : UIObject
     public TextMeshPro description;
     public TextMeshPro valueLabel;
 
-
     public override void UpdateInterface()
     {
         if(manager.biopsyCollected)
@@ -41,7 +40,6 @@ public class BiopsyUI : UIObject
                 2
             ).ToString() + " cm";
         }
-
         else
         {
             enabled = false;
