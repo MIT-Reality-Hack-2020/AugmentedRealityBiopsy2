@@ -19,6 +19,8 @@ public class UI : MonoBehaviour
     {
         patientID.UpdateInterface();
         biopsyUI.UpdateInterface();
-        alphaSlider.UpdateInterface();
+
+        if(alphaSlider)
+            alphaSlider.UpdateInterface();
     }
 }

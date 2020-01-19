@@ -313,6 +313,7 @@ GameObject:
   m_Component:
   - component: {fileID: 59659374}
   - component: {fileID: 59659373}
+  - component: {fileID: 59659375}
   m_Layer: 0
   m_Name: BiopsyManager
   m_TagString: Untagged
@@ -334,11 +335,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   biopsyTool: {fileID: 2144495982}
   biopsyPath: {fileID: 469928784627551538}
+  biopsyPoint: {fileID: 1858514433}
   entryPoint: {fileID: 469928784627551540}
-  biopsyPoint1: {fileID: 0}
-  biopsyPoint2: {fileID: 0}
-  biopsyPoint3: {fileID: 0}
-  biopsyPoint4: {fileID: 0}
+  biopsyCollected: 0
+  audioSource: {fileID: 59659375}
 --- !u!4 &59659374
 Transform:
   m_ObjectHideFlags: 0
@@ -354,6 +354,103 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &59659375
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 59659372}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 3b98d30f895318a4bb275ad029a4af3f,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: 570d5c84cf163914c8afdf35290ea64e, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &68578558
 GameObject:
   m_ObjectHideFlags: 0
@@ -649,7 +746,7 @@ MonoBehaviour:
   transferFunctionUI: {fileID: 1881603621}
   patientID: {fileID: 344959638}
   biopsyUI: {fileID: 2081466204}
-  alphaSlider: {fileID: 1208068592}
+  alphaSlider: {fileID: 0}
 --- !u!4 &155628318
 Transform:
   m_ObjectHideFlags: 0
@@ -672,6 +769,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2575018989550280420, guid: 268600ebaa81f6e42b0b0ed1f09d8611,
+        type: 3}
+      propertyPath: m_Name
+      value: PatientID
+      objectReference: {fileID: 0}
     - target: {fileID: 5795442416915380721, guid: 268600ebaa81f6e42b0b0ed1f09d8611,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -701,11 +803,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2575018989550280420, guid: 268600ebaa81f6e42b0b0ed1f09d8611,
-        type: 3}
-      propertyPath: m_Name
-      value: PatientID
       objectReference: {fileID: 0}
     - target: {fileID: 2575018989550280421, guid: 268600ebaa81f6e42b0b0ed1f09d8611,
         type: 3}
@@ -1171,18 +1268,6 @@ MonoBehaviour:
   mainCamera: {fileID: 68578564}
   overlay: {fileID: 469928784627551536}
   patientID: {fileID: 0}
---- !u!114 &1208068592 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5378855701041015780, guid: 71b21368b6fc1de4c8d8e26dea885f52,
-    type: 3}
-  m_PrefabInstance: {fileID: 469928784627551535}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c277e4ad02ad05b47bf0f6d8a463f575, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1444691768
 GameObject:
   m_ObjectHideFlags: 0
@@ -1435,6 +1520,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1858514433 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 871187421230813221, guid: 71b21368b6fc1de4c8d8e26dea885f52,
+    type: 3}
+  m_PrefabInstance: {fileID: 469928784627551535}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1881603620
 GameObject:
   m_ObjectHideFlags: 0
@@ -1550,15 +1641,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3821304750728855012, guid: 71b21368b6fc1de4c8d8e26dea885f52,
+    - target: {fileID: 6850860839654008168, guid: 71b21368b6fc1de4c8d8e26dea885f52,
         type: 3}
-      propertyPath: m_Mesh
-      value: 
+      propertyPath: m_LocalPosition.x
+      value: 32.7
       objectReference: {fileID: 0}
-    - target: {fileID: 4011056092983802881, guid: 71b21368b6fc1de4c8d8e26dea885f52,
+    - target: {fileID: 6850860839654008168, guid: 71b21368b6fc1de4c8d8e26dea885f52,
         type: 3}
-      propertyPath: m_Mesh
-      value: 
+      propertyPath: m_LocalPosition.y
+      value: -8.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6850860839654008168, guid: 71b21368b6fc1de4c8d8e26dea885f52,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 871187421230813221, guid: 71b21368b6fc1de4c8d8e26dea885f52,
+        type: 3}
+      propertyPath: m_Name
+      value: BiopsyPoint
       objectReference: {fileID: 0}
     - target: {fileID: 1802434773845403594, guid: 71b21368b6fc1de4c8d8e26dea885f52,
         type: 3}
@@ -1569,6 +1670,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1099985054379982793, guid: 71b21368b6fc1de4c8d8e26dea885f52,
+        type: 3}
+      propertyPath: manager
+      value: 
+      objectReference: {fileID: 59659373}
+    - target: {fileID: 3821304750728855012, guid: 71b21368b6fc1de4c8d8e26dea885f52,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4011056092983802881, guid: 71b21368b6fc1de4c8d8e26dea885f52,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3667934704321763429, guid: 71b21368b6fc1de4c8d8e26dea885f52,
         type: 3}
@@ -1600,11 +1716,6 @@ PrefabInstance:
       propertyPath: OnInteractionEnded.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    - target: {fileID: 1099985054379982793, guid: 71b21368b6fc1de4c8d8e26dea885f52,
-        type: 3}
-      propertyPath: manager
-      value: 
-      objectReference: {fileID: 59659373}
     - target: {fileID: 6481794860055522875, guid: 71b21368b6fc1de4c8d8e26dea885f52,
         type: 3}
       propertyPath: m_Mesh
@@ -2584,6 +2695,11 @@ PrefabInstance:
     - target: {fileID: 5378855701041015798, guid: 71b21368b6fc1de4c8d8e26dea885f52,
         type: 3}
       propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3033493526227600579, guid: 71b21368b6fc1de4c8d8e26dea885f52,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

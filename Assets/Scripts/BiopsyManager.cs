@@ -10,11 +10,30 @@ public class BiopsyManager : MonoBehaviour
     
     public BiopsyPath biopsyPath;
 
+    public GameObject biopsyPoint;
     public SurgicalPointEntry entryPoint;
 
-    public SurgicalPointBiopsy biopsyPoint1;
-    public SurgicalPointBiopsy biopsyPoint2;
-    public SurgicalPointBiopsy biopsyPoint3;
-    public SurgicalPointBiopsy biopsyPoint4;
+    public bool biopsyCollected;
+    
+    public AudioSource audioSource;
 
+    public void Update()
+    {
+        if(!biopsyCollected)
+        {
+            if(Vector3.Distance(
+                biopsyPoint.transform.position,
+                biopsyTool.toolTip
+            ) < 0.02f)
+            {
+                PerformBiopsy();
+            }
+
+        }
+    }
+    public void PerformBiopsy()
+    {
+        biopsyCollected = true;
+        audioSource.Play();
+    }
 }

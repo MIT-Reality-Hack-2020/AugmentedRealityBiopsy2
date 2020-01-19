@@ -7,17 +7,28 @@ using System;
 public class BiopsyUI : UIObject
 {
     public BiopsyManager manager;
-    public TextMeshPro label;
+    public TextMeshPro description;
+    public TextMeshPro valueLabel;
+
 
     public override void UpdateInterface()
     {
-        if (manager.biopsyTool.CloseToEntryPoint())
+        if(manager.biopsyCollected)
         {
             enabled = true;
-
+            description.enabled = false;
+            valueLabel.text = "Biopsy Collected";
+            
+            base.UpdateInterface();
+        }
+        else if (manager.biopsyTool.CloseToEntryPoint() && !manager.biopsyCollected)
+        {
+            enabled = true;
+            description.enabled = true;
+            
             base.UpdateInterface();
 
-            label.text = Math.Round(
+            valueLabel.text = Math.Round(
                 manager.biopsyTool.DistanceFromTumor(),
                 2
             ).ToString() + " cm";
