@@ -29,13 +29,13 @@ public abstract class BiopsyPath : MonoBehaviour
 
     public Correctness CurrentCorrectness()
     {
-        if(BiopsyAngle() < 5f 
-        && BiopsyAngle() > 175f)
+        if(BiopsyAngle() < 10f 
+        && BiopsyAngle() > 170f)
         {
             return Correctness.correct;
         }
-        else if(BiopsyAngle() < 10f 
-        && BiopsyAngle() > 170f)
+        else if(BiopsyAngle() < 20f 
+        && BiopsyAngle() > 160f)
         {
             return Correctness.intermediate;
         }
@@ -52,7 +52,7 @@ public abstract class BiopsyPath : MonoBehaviour
 
     public virtual void Update()
     {
-        
+
     }
 
 }

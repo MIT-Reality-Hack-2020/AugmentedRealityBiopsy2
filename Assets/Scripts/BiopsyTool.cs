@@ -17,14 +17,14 @@ public class BiopsyTool : MonoBehaviour
         return GameObject.Find("Right_PokePointer(Clone)");
     }
 
-    public GameObject ThumbKnuckle()
+    public GameObject ThumbDistalJoint()
     {   
-        return GameObject.Find("ThumbProximalJoint Proxy Transform");
+        return GameObject.Find("ThumbDistalJoint Proxy Transform");
     }
     
-    public GameObject IndexFingerKnuckle()
+    public GameObject IndexDistalJoint()
     {
-        return GameObject.Find("IndexKnuckle Proxy Transform");
+        return GameObject.Find("IndexMiddleJoint Proxy Transform");
     }
 
     public GameObject Wrist()
@@ -82,16 +82,18 @@ public class BiopsyTool : MonoBehaviour
 
     public Vector3 ToolVector()
     {
-        if (RightIndexFinger() && IndexFingerKnuckle() && ThumbKnuckle())
+        if (RightIndexFinger() 
+        && IndexDistalJoint() 
+        && ThumbDistalJoint())
         {
             return ToolVector(
                 RightIndexFinger().transform.position,
-                IndexFingerKnuckle().transform.position 
-                // Vector3.Lerp(
-                //     IndexFingerKnuckle().transform.position, 
-                //     ThumbKnuckle().transform.position, 
-                //     0.5f
-                // )
+                // IndexFingerKnuckle().transform.position 
+                Vector3.Lerp(
+                    IndexDistalJoint().transform.position, 
+                    ThumbDistalJoint().transform.position, 
+                    0.5f
+                )
             ).normalized;
         }
         else
@@ -107,9 +109,7 @@ public class BiopsyTool : MonoBehaviour
 
     public void Update()
     {
-        GameObject indexFingerKnuckle = GameObject.Find("IndexKnuckle Proxy Transform");
-
-        if (RightIndexFinger() && indexFingerKnuckle
+        if (RightIndexFinger()
         && Program.instance.interactionManager.currentPhase == Phase.close)
         {
             toolTip = RightIndexFinger().transform.position + ToolVector() * lengthOfTool;
