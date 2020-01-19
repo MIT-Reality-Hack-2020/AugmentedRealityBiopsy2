@@ -9,7 +9,7 @@ public class BiopsyTool : MonoBehaviour
     public LineRenderer coloredTip;
 
     public GameObject fakeFingerFront;
-    
+
     public GameObject fakeFingerBack;
 
     public Vector3 toolTip;
@@ -42,10 +42,28 @@ public class BiopsyTool : MonoBehaviour
         );
     }
 
+
+    public bool CloseToEntryPoint()
+    {
+        if (RightIndexFinger()
+        && Vector3.Distance(
+            manager.entryPoint.transform.position,
+            toolTip
+        ) < 0.15f
+        )
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
     public Vector3 ToolVector(GameObject frontObject, GameObject backObject)
     {
         return (frontObject.transform.position - backObject.transform.position).normalized;
-    } 
+    }
 
     public void Update()
     {
@@ -55,9 +73,9 @@ public class BiopsyTool : MonoBehaviour
         && Program.instance.interactionManager.currentPhase == Phase.close)
         {
             biopsyRunning = true;
-            
+
             toolTip = RightIndexFinger().transform.position + ToolVector(RightIndexFinger(), indexFingerKnuckle) * lengthOfTool;
-            
+
             Vector3 endOfTool = RightIndexFinger().transform.position + -ToolVector(RightIndexFinger(), indexFingerKnuckle) * lengthOfTool;
 
             rod.positionCount = 2;
@@ -72,7 +90,7 @@ public class BiopsyTool : MonoBehaviour
             coloredTip.positionCount = 2;
             coloredTip.SetPosition(0, toolTip);
             coloredTip.SetPosition(
-                1, 
+                1,
                 toolTip + -ToolVector(RightIndexFinger(), indexFingerKnuckle) * remainingDistance // fakefinger
             );
 

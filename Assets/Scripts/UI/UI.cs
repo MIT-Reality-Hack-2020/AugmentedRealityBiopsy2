@@ -8,6 +8,7 @@ public class UI : MonoBehaviour
     public TransferFunctionUI transferFunctionUI;
     public PatientID patientID;
     public BiopsyUI biopsyUI;
+    public AlphaSlider alphaSlider;
 
     public void Awake()
     {
@@ -18,5 +19,6 @@ public class UI : MonoBehaviour
     {
         patientID.UpdateInterface();
         biopsyUI.UpdateInterface();
+        alphaSlider.UpdateInterface();
     }
 }

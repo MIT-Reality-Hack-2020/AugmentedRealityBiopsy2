@@ -8,7 +8,7 @@ public class Head : MonoBehaviour
     public Material materialSkin;
     public Material materialInside;
 
-    
+
     // Update is called once per frame
     void Update()
     {
@@ -28,7 +28,7 @@ public class Head : MonoBehaviour
             {
                 GetComponent<MeshRenderer>().enabled = false;
             }
-            else
+            else if(overlay.currentStyle == OverlayStyle.mesh)
             {
                 GetComponent<MeshRenderer>().enabled = true;
                 GetComponent<MeshRenderer>().material = materialInside;

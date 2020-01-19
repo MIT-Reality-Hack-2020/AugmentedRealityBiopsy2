@@ -17,5 +17,4 @@ public class BiopsyManager : MonoBehaviour
     public SurgicalPointBiopsy biopsyPoint3;
     public SurgicalPointBiopsy biopsyPoint4;
 
-
 }

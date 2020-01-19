@@ -11,10 +11,11 @@ public class BiopsyUI : UIObject
 
     public override void UpdateInterface()
     {
-        base.UpdateInterface();
-        if (Program.instance.interactionManager.currentPhase == Phase.close)
+        if (manager.biopsyTool.CloseToEntryPoint())
         {
             enabled = true;
+
+            base.UpdateInterface();
 
             label.text = Math.Round(
                 manager.biopsyTool.DistanceFromTumor(),

@@ -37,26 +37,26 @@ public class InteractionManager : MonoBehaviour
 
     public void Update()
     {
-        if(DistanceFromCamera() > 1f )
+        if(DistanceFromCamera() > 1.1f )
         {
             currentPhase = Phase.far;
         }
-        else if(DistanceFromCamera() <= 1f && DistanceFromCamera() > 0.5f)
+        else if(DistanceFromCamera() <= 1.1f && DistanceFromCamera() > 0.65f)
         {
             currentPhase = Phase.identification;
         }
-        else if(DistanceFromCamera() < 0.5f)
+        else if(DistanceFromCamera() < 0.65f)
         {
             currentPhase = Phase.close;  
         }
 
-        if(DistanceFromCamera() > 0.6f)
+        if(Program.instance.biopsyManager.biopsyTool.CloseToEntryPoint())
         {
-            Program.instance.aROverlay.currentStyle = OverlayStyle.skinned;
+            Program.instance.aROverlay.currentStyle = OverlayStyle.mesh;
         }
         else
         {
-            Program.instance.aROverlay.currentStyle = OverlayStyle.mesh;
+            Program.instance.aROverlay.currentStyle = OverlayStyle.skinned;
         }
     }
 

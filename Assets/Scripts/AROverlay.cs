@@ -20,7 +20,7 @@ public class AROverlay : MonoBehaviour
     public void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.X))
         {
             if (Program.instance.biopsyManager.biopsyTool.RightIndexFinger()
             && Program.instance.biopsyManager.biopsyTool.Wrist())

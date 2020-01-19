@@ -12,8 +12,8 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: Microsoft
-  productName: RayActivity
+  companyName: AlignSurgical
+  productName: ClearPath
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -150,7 +150,7 @@ PlayerSettings:
       sharedDepthBuffer: 0
       dashSupport: 0
     enable360StereoCapture: 0
-  isWsaHolographicRemotingEnabled: 1
+  isWsaHolographicRemotingEnabled: 0
   protectGraphicsMemory: 0
   enableFrameTimingStats: 0
   useHDRDisplay: 0
@@ -705,14 +705,14 @@ PlayerSettings:
     Standalone: 3
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: Microsoft.MixedReality.Toolkit.RayActivity
+  metroPackageName: Microsoft.MixedReality.Toolkit.Align
   metroPackageVersion: 2.3.0.0
   metroCertificatePath: Assets/WSATestCertificate.pfx
   metroCertificatePassword: 
   metroCertificateSubject: Microsoft
   metroCertificateIssuer: Microsoft
   metroCertificateNotAfter: 805f1f5559edd601
-  metroApplicationDescription: Microsoft.MixedReality.Toolkit.RayActivity
+  metroApplicationDescription: Microsoft.MixedReality.Toolkit.Align
   wsaImages: {}
   metroTileShortName: MixedRealityToolkit
   metroTileShowName: 0
@@ -768,7 +768,7 @@ PlayerSettings:
       WebCam: False
   metroTargetDeviceFamilies:
     Desktop: False
-    Holographic: False
+    Holographic: True
     IoT: False
     IoTHeadless: False
     Mobile: False
