@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class HeadOperation : Head
 {
+    public Material materialSkin;
     public OperationOverlay operationOverlay;
 
     public override bool IsVisible()

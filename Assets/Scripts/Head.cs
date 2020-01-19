@@ -4,7 +4,6 @@ using UnityEngine;
 
 public abstract class Head : MonoBehaviour
 {
-    public Material materialSkin;
     public Material materialInside;
 
     public Tumor tumor;

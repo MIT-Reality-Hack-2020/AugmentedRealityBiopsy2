@@ -3223,5 +3223,80 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3962417759242732625, guid: 73a890400a32bfb44b34d5df96914268,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3794750996903529829, guid: 73a890400a32bfb44b34d5df96914268,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3794750996903529829, guid: 73a890400a32bfb44b34d5df96914268,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3794750996903529829, guid: 73a890400a32bfb44b34d5df96914268,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3794750996903529829, guid: 73a890400a32bfb44b34d5df96914268,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3794750996903529829, guid: 73a890400a32bfb44b34d5df96914268,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6075673209585123866, guid: 73a890400a32bfb44b34d5df96914268,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 707282165708585811, guid: 73a890400a32bfb44b34d5df96914268,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 707282165708585811, guid: 73a890400a32bfb44b34d5df96914268,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 707282165708585811, guid: 73a890400a32bfb44b34d5df96914268,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 707282165708585811, guid: 73a890400a32bfb44b34d5df96914268,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 707282165708585811, guid: 73a890400a32bfb44b34d5df96914268,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7535628514249506786, guid: 73a890400a32bfb44b34d5df96914268,
+        type: 3}
+      propertyPath: biopsyManager
+      value: 
+      objectReference: {fileID: 59659373}
+    - target: {fileID: 7535628514249506786, guid: 73a890400a32bfb44b34d5df96914268,
+        type: 3}
+      propertyPath: interactionManager
+      value: 
+      objectReference: {fileID: 1015256035}
+    - target: {fileID: 1734450079275078176, guid: 73a890400a32bfb44b34d5df96914268,
+        type: 3}
+      propertyPath: manager
+      value: 
+      objectReference: {fileID: 59659373}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73a890400a32bfb44b34d5df96914268, type: 3}
