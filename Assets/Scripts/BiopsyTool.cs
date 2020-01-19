@@ -88,12 +88,13 @@ public class BiopsyTool : MonoBehaviour
         if (RightIndexFinger() && IndexFingerKnuckle() && ThumbKnuckle())
         {
             return ToolVector(
-                RightIndexFinger().transform.position, 
-                Vector3.Lerp(
-                    IndexFingerKnuckle().transform.position, 
-                    ThumbKnuckle().transform.position, 
-                    0.5f
-                )
+                RightIndexFinger().transform.position,
+                IndexFingerKnuckle().transform.position 
+                // Vector3.Lerp(
+                //     IndexFingerKnuckle().transform.position, 
+                //     ThumbKnuckle().transform.position, 
+                //     0.5f
+                // )
             );
         }
         else

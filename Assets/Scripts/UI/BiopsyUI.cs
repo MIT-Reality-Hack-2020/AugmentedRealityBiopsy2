@@ -21,6 +21,14 @@ public class BiopsyUI : UIObject
             
             base.UpdateInterface();
         }
+        else if(manager.biopsyTool.VeryCloseToEntryPoint() && !manager.biopsyPath.CorrectAngle())
+        {
+            enabled = true;
+            description.enabled = false;
+            valueLabel.text = "Adjust Instrument";
+            
+            base.UpdateInterface();
+        }
         else if (manager.biopsyTool.CloseToEntryPoint() && !manager.biopsyCollected)
         {
             enabled = true;
@@ -33,6 +41,7 @@ public class BiopsyUI : UIObject
                 2
             ).ToString() + " cm";
         }
+
         else
         {
             enabled = false;
