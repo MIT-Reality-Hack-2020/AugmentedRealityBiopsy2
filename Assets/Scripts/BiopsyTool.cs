@@ -10,8 +10,6 @@ public class BiopsyTool : MonoBehaviour
 
     public Vector3 toolTip;
 
-    public bool biopsyRunning;
-
     public float lengthOfTool = 0.2f;
 
     public GameObject RightIndexFinger()
@@ -115,8 +113,6 @@ public class BiopsyTool : MonoBehaviour
         if (RightIndexFinger() && indexFingerKnuckle
         && Program.instance.interactionManager.currentPhase == Phase.close)
         {
-            biopsyRunning = true;
-
             toolTip = RightIndexFinger().transform.position + ToolVector() * lengthOfTool;
 
             Vector3 endOfTool = RightIndexFinger().transform.position + -ToolVector() * lengthOfTool;
@@ -141,7 +137,6 @@ public class BiopsyTool : MonoBehaviour
         }
         else
         {
-            biopsyRunning = false;
             rod.positionCount = 0;
             coloredTip.positionCount = 0;
             toolTip = Vector3.zero;

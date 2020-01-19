@@ -36,7 +36,11 @@ public class InteractionManager : MonoBehaviour
 
     public void Update()
     {
-        if(DistanceFromCamera() > 1.1f )
+        if(DistanceFromCamera() > 1.8f && patientID)
+        {
+            overlay.approved = false;
+        }
+        else if(DistanceFromCamera() > 1.1f )
         {
             currentPhase = Phase.far;
         }
@@ -44,14 +48,6 @@ public class InteractionManager : MonoBehaviour
         {
             currentPhase = Phase.close;
         }
-
-        if(Input.GetKeyDown(KeyCode.R))
-            Reset();
-    }
-
-    public void Reset()
-    {
-        UI.instance.patientID.approved = false;
     }
 
 }

@@ -51,18 +51,6 @@ public class BiopsyPath : MonoBehaviour
         }
     }
 
-    public bool CorrectAngle()
-    {
-        return Vector3.Angle(
-            biopsyManager.biopsyTool.ToolVector(),
-            TrajectoryVector()
-        ) < 5f 
-        && Vector3.Angle(
-            biopsyManager.biopsyTool.ToolVector(),
-            TrajectoryVector()
-        ) > 175f ;
-    }
-
     public Vector3 TrajectoryVector()
     {
         return (entryPoint.transform.position - biopsyManager.biopsyPoint.transform.position).normalized;
@@ -94,7 +82,6 @@ public class BiopsyPath : MonoBehaviour
             {
                 lineRenderer.material = materialNormal;
             }
-
         }
         else
         {

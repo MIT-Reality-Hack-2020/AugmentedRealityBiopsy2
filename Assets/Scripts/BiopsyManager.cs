@@ -7,28 +7,34 @@ using System.Linq;
 public class BiopsyManager : MonoBehaviour
 {
     public BiopsyTool biopsyTool;
-    
+
     public BiopsyPath biopsyPath;
 
     public GameObject biopsyPoint;
     public SurgicalPointEntry entryPoint;
 
     public bool biopsyCollected;
-    
+
     public AudioSource audioSource;
 
     public void Update()
     {
-        if(!biopsyCollected)
-        {
-            if(Vector3.Distance(
+        if (!biopsyCollected && Vector3.Distance(
                 biopsyPoint.transform.position,
                 biopsyTool.toolTip
             ) < 0.02f)
-            {
-                PerformBiopsy();
-            }
+        {
+            PerformBiopsy();
         }
+        else if (biopsyCollected && Vector3.Distance(
+            biopsyPoint.transform.position,
+            biopsyTool.toolTip
+            ) > 1.1f
+        )
+        {
+            biopsyCollected = false;
+        }
+
     }
     public void PerformBiopsy()
     {
