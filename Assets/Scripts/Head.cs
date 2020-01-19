@@ -2,38 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Head : MonoBehaviour
+public abstract class Head : MonoBehaviour
 {
-    public AROverlay overlay;
-    public Material materialSkin;
     public Material materialInside;
 
+    public Tumor tumor;
 
-    // Update is called once per frame
-    void Update()
+    public virtual bool IsVisible()
     {
-        if(Program.instance.interactionManager.currentPhase == Phase.far)
-        {
-            GetComponent<MeshRenderer>().enabled = false;
-        }
-        else
-        {
-            if(overlay.currentStyle == OverlayStyle.skinned)
-            {
-                GetComponent<MeshRenderer>().enabled = true;
-                GetComponent<MeshRenderer>().material = materialSkin;
-
-            }
-            else if(overlay.currentStyle == OverlayStyle.mri)
-            {
-                GetComponent<MeshRenderer>().enabled = false;
-            }
-            else if(overlay.currentStyle == OverlayStyle.mesh)
-            {
-                GetComponent<MeshRenderer>().enabled = true;
-                GetComponent<MeshRenderer>().material = materialInside;
-            }
-        }
-
+        return false;
     }
+    
 }

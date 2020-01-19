@@ -10,7 +10,6 @@ public class BiopsyUI : UIObject
     public TextMeshPro description;
     public TextMeshPro valueLabel;
 
-
     public override void UpdateInterface()
     {
         if(manager.biopsyCollected)
@@ -39,9 +38,10 @@ public class BiopsyUI : UIObject
             valueLabel.text = Math.Round(
                 manager.biopsyTool.DistanceFromTumor(),
                 2
-            ).ToString() + " cm";
+            ).ToString() + " cm" 
+            + System.Environment.NewLine 
+            + manager.biopsyPath.BiopsyAngle();
         }
-
         else
         {
             enabled = false;

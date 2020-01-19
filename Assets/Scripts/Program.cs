@@ -6,14 +6,34 @@ public class Program : MonoBehaviour
 {
     public static Program instance;
     public ImportManager importManager;
+    
     public InteractionManager interactionManager;
-    public BiopsyManager biopsyManager;
+    
     public TransferFunctionManager transferFunctionManager;
+    public BiopsyManager biopsyManager;
+
+    public TransferFunctionUI transferFunctionUI;
+
+    public PatientID patientID;
+    public BiopsyUI biopsyUI;
+    public PlanningOverlay planningOverlay;
+    
     public VolumeRenderedObject volumeRenderedObject;
-    public AROverlay aROverlay;
+    public OperationOverlay operationOverlay;
+
 
     public void Awake()
     {
         instance = this;
     }
+
+    public void Update()
+    {
+        patientID.UpdateInterface();
+        biopsyUI.UpdateInterface();
+        planningOverlay.UpdateInterface();
+        // if(alphaSlider)
+        //     alphaSlider.UpdateInterface();
+    }
+
 }
