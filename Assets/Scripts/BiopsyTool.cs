@@ -8,19 +8,23 @@ public class BiopsyTool : MonoBehaviour
     public LineRenderer rod;
     public LineRenderer coloredTip;
 
-    public GameObject fakeFingerFront;
-    
-    public GameObject fakeFingerBack;
-
     public Vector3 toolTip;
-
-    public bool biopsyRunning;
 
     public float lengthOfTool = 0.2f;
 
     public GameObject RightIndexFinger()
     {
         return GameObject.Find("Right_PokePointer(Clone)");
+    }
+
+    public GameObject ThumbKnuckle()
+    {   
+        return GameObject.Find("ThumbProximalJoint Proxy Transform");
+    }
+    
+    public GameObject IndexFingerKnuckle()
+    {
+        return GameObject.Find("IndexKnuckle Proxy Transform");
     }
 
     public GameObject Wrist()
@@ -42,10 +46,65 @@ public class BiopsyTool : MonoBehaviour
         );
     }
 
-    public Vector3 ToolVector(GameObject frontObject, GameObject backObject)
+
+    public bool CloseToEntryPoint()
     {
-        return (frontObject.transform.position - backObject.transform.position).normalized;
-    } 
+        if (RightIndexFinger()
+        && Vector3.Distance(
+            manager.entryPoint.transform.position,
+            toolTip
+        ) < 0.15f
+        )
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+       public bool VeryCloseToEntryPoint()
+    {
+        if (RightIndexFinger()
+        && Vector3.Distance(
+            manager.entryPoint.transform.position,
+            toolTip
+        ) < 0.05f
+        )
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    public Vector3 ToolVector()
+    {
+        if (RightIndexFinger() && IndexFingerKnuckle() && ThumbKnuckle())
+        {
+            return ToolVector(
+                RightIndexFinger().transform.position,
+                IndexFingerKnuckle().transform.position 
+                // Vector3.Lerp(
+                //     IndexFingerKnuckle().transform.position, 
+                //     ThumbKnuckle().transform.position, 
+                //     0.5f
+                // )
+            );
+        }
+        else
+        {
+            return Vector3.zero;
+        }
+    }
+
+    public Vector3 ToolVector(Vector3 frontObject, Vector3 backObject)
+    {
+        return (frontObject - backObject).normalized;
+    }
 
     public void Update()
     {
@@ -54,11 +113,9 @@ public class BiopsyTool : MonoBehaviour
         if (RightIndexFinger() && indexFingerKnuckle
         && Program.instance.interactionManager.currentPhase == Phase.close)
         {
-            biopsyRunning = true;
-            
-            toolTip = RightIndexFinger().transform.position + ToolVector(RightIndexFinger(), indexFingerKnuckle) * lengthOfTool;
-            
-            Vector3 endOfTool = RightIndexFinger().transform.position + -ToolVector(RightIndexFinger(), indexFingerKnuckle) * lengthOfTool;
+            toolTip = RightIndexFinger().transform.position + ToolVector() * lengthOfTool;
+
+            Vector3 endOfTool = RightIndexFinger().transform.position + -ToolVector() * lengthOfTool;
 
             rod.positionCount = 2;
             rod.SetPosition(0, toolTip);
@@ -72,15 +129,14 @@ public class BiopsyTool : MonoBehaviour
             coloredTip.positionCount = 2;
             coloredTip.SetPosition(0, toolTip);
             coloredTip.SetPosition(
-                1, 
-                toolTip + -ToolVector(RightIndexFinger(), indexFingerKnuckle) * remainingDistance // fakefinger
+                1,
+                toolTip + -ToolVector() * remainingDistance // fakefinger
             );
 
             this.transform.position = RightIndexFinger().transform.position;
         }
         else
         {
-            biopsyRunning = false;
             rod.positionCount = 0;
             coloredTip.positionCount = 0;
             toolTip = Vector3.zero;

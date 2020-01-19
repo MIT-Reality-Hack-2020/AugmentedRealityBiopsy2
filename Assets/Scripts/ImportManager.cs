@@ -102,7 +102,7 @@ public class ImportManager : MonoBehaviour
     {
         GameObject go = GameObject.Instantiate(volumeObjectPrefab) as GameObject;
 
-        go.transform.SetParent(Program.instance.aROverlay.orientationSphere.transform);
+        go.transform.SetParent(Program.instance.aROverlay.transform);
         go.transform.localPosition = new Vector3(-0.0083f, 0.0426f, 0.0083f);
         go.transform.rotation = Quaternion.Euler(-20f, 180f, 180f);
 

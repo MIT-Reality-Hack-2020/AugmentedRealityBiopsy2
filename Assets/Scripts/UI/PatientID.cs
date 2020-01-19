@@ -7,26 +7,30 @@ public class PatientID : UIObject
     public InteractionManager manager;
     public AROverlay overlay;
 
+    public bool approved;
 
-    public bool outOfTheWay;
+    public void Approve()
+    {
+        approved = true;
+    }
+
+    public void Dismiss()
+    {
+
+    }
 
     public override void UpdateInterface()
     {
-        base.UpdateInterface();
-        if (manager.currentPhase == Phase.far)
+        if (approved)
         {
             enabled = false;
         }
-        else if (manager.currentPhase == Phase.identification)
+        else
         {
+            base.UpdateInterface();
             enabled = true;
-            outOfTheWay = false;
         }
-        else if (manager.currentPhase == Phase.close)
-        {
-            enabled = true;
-            outOfTheWay = true;
-        }
+
     }
 
 

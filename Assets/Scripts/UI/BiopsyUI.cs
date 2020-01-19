@@ -7,20 +7,41 @@ using System;
 public class BiopsyUI : UIObject
 {
     public BiopsyManager manager;
-    public TextMeshPro label;
+    public TextMeshPro description;
+    public TextMeshPro valueLabel;
+
 
     public override void UpdateInterface()
     {
-        base.UpdateInterface();
-        if (Program.instance.interactionManager.currentPhase == Phase.close)
+        if(manager.biopsyCollected)
         {
             enabled = true;
+            description.enabled = false;
+            valueLabel.text = "Biopsy Collected";
+            
+            base.UpdateInterface();
+        }
+        else if(manager.biopsyTool.VeryCloseToEntryPoint() && manager.biopsyPath.CurrentCorrectness() != Correctness.correct)
+        {
+            enabled = true;
+            description.enabled = false;
+            valueLabel.text = "Adjust Instrument";
+            
+            base.UpdateInterface();
+        }
+        else if (manager.biopsyTool.VeryCloseToEntryPoint() && manager.biopsyPath.CurrentCorrectness() == Correctness.correct)
+        {
+            enabled = true;
+            description.enabled = true;
+            
+            base.UpdateInterface();
 
-            label.text = Math.Round(
+            valueLabel.text = Math.Round(
                 manager.biopsyTool.DistanceFromTumor(),
                 2
             ).ToString() + " cm";
         }
+
         else
         {
             enabled = false;
