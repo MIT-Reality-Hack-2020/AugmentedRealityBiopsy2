@@ -6,7 +6,6 @@ using UnityEngine;
 public enum Phase
 {
     far, // you see nothing
-    identification,  /// skinned model, patient ID, checklist, 
     close, // entrypoint
 }
 
@@ -41,22 +40,9 @@ public class InteractionManager : MonoBehaviour
         {
             currentPhase = Phase.far;
         }
-        else if(DistanceFromCamera() <= 1.1f && DistanceFromCamera() > 0.65f)
+        else if(DistanceFromCamera() <= 1.1f)
         {
-            currentPhase = Phase.identification;
-        }
-        else if(DistanceFromCamera() < 0.65f)
-        {
-            currentPhase = Phase.close;  
-        }
-
-        if(Program.instance.biopsyManager.biopsyTool.CloseToEntryPoint())
-        {
-            Program.instance.aROverlay.currentStyle = OverlayStyle.mesh;
-        }
-        else
-        {
-            Program.instance.aROverlay.currentStyle = OverlayStyle.skinned;
+            currentPhase = Phase.close;
         }
     }
 
