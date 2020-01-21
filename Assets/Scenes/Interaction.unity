@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.4465782, g: 0.49641252, b: 0.5748167, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1880,7 +1880,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1992475346}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.2562}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 68578559}
@@ -1934,6 +1934,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3351944476977394520, guid: 71b21368b6fc1de4c8d8e26dea885f52,
+        type: 3}
+      propertyPath: manager
+      value: 
+      objectReference: {fileID: 59659373}
+    - target: {fileID: 3351944476977394520, guid: 71b21368b6fc1de4c8d8e26dea885f52,
+        type: 3}
+      propertyPath: biopsyManager
+      value: 
+      objectReference: {fileID: 59659373}
+    - target: {fileID: 3351944476977394520, guid: 71b21368b6fc1de4c8d8e26dea885f52,
+        type: 3}
+      propertyPath: interactionManager
+      value: 
+      objectReference: {fileID: 1015256035}
     - target: {fileID: 871187421230813221, guid: 71b21368b6fc1de4c8d8e26dea885f52,
         type: 3}
       propertyPath: m_Name
@@ -2069,21 +2084,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3351944476977394520, guid: 71b21368b6fc1de4c8d8e26dea885f52,
+    - target: {fileID: 7089457575188331911, guid: 71b21368b6fc1de4c8d8e26dea885f52,
         type: 3}
-      propertyPath: manager
-      value: 
-      objectReference: {fileID: 59659373}
-    - target: {fileID: 3351944476977394520, guid: 71b21368b6fc1de4c8d8e26dea885f52,
-        type: 3}
-      propertyPath: biopsyManager
-      value: 
-      objectReference: {fileID: 59659373}
-    - target: {fileID: 3351944476977394520, guid: 71b21368b6fc1de4c8d8e26dea885f52,
-        type: 3}
-      propertyPath: interactionManager
-      value: 
-      objectReference: {fileID: 1015256035}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3473118265309852958, guid: 71b21368b6fc1de4c8d8e26dea885f52,
         type: 3}
       propertyPath: m_Parameters.widthMultiplier
@@ -3265,6 +3270,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2192512093596140316, guid: 73a890400a32bfb44b34d5df96914268,
+        type: 3}
+      propertyPath: m_Name
+      value: PlanningOverlay
+      objectReference: {fileID: 0}
     - target: {fileID: 3897254417506602844, guid: 73a890400a32bfb44b34d5df96914268,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -3280,11 +3290,6 @@ PrefabInstance:
       propertyPath: interactionManager
       value: 
       objectReference: {fileID: 1015256035}
-    - target: {fileID: 2192512093596140316, guid: 73a890400a32bfb44b34d5df96914268,
-        type: 3}
-      propertyPath: m_Name
-      value: PlanningOverlay
-      objectReference: {fileID: 0}
     - target: {fileID: 2192512093596140317, guid: 73a890400a32bfb44b34d5df96914268,
         type: 3}
       propertyPath: m_LocalPosition.x
