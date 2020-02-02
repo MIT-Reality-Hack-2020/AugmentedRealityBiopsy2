@@ -6,7 +6,7 @@ public class SurgicalPointEntry : SurgicalPoint
 {
     public void Update()
     {
-        if(Program.instance.interactionManager.currentPhase == Phase.close)
+        if(Program.instance.interactionManager && Program.instance.interactionManager.currentPhase == Phase.close)
         {
             GetComponent<MeshRenderer>().enabled = true;
         }

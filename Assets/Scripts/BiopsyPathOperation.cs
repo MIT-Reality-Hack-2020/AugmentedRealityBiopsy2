@@ -8,11 +8,23 @@ public class BiopsyPathOperation : BiopsyPath
     public Material materialIntermediate;
     public Material materialFalse;
 
+
+    public bool IsVisible()
+    {
+        if(head.IsVisible() && Program.instance.currentMode == ProgramMode.simulation)
+        {
+            return true;
+        }
+        else
+            return false;
+    }
+
     // Update is called once per frame
     public override void Update()
     {
         base.Update();
-        if (head.IsVisible())
+        
+        if (IsVisible())
         {
             lineRenderer.positionCount = 3;
             lineRenderer.SetPosition(0, biopsyPoint.transform.position);

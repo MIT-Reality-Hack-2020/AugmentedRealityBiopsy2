@@ -9,7 +9,10 @@ public class HeadOperation : Head
 
     public override bool IsVisible()
     {
-        return operationOverlay.IsVisible();
+        if(Program.instance.currentMode == ProgramMode.mriExploration)
+            return false;
+        else
+            return operationOverlay.IsVisible();
     }
 
     void Update()
